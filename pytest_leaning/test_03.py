@@ -5,7 +5,7 @@
 
 import pytest
 
-@pytest.mark.skip
+
 class TestDemo:
     def func(self,x):
         return x+1
@@ -13,6 +13,7 @@ class TestDemo:
     def test_func_1(self):
         assert self.func(3)==5
 
+    @pytest.mark.skip
     def test_func_2(self):
         s="hell"
         assert "h" in s
