@@ -1,5 +1,5 @@
 '''
-三、pytest 运行模式
+三、pytest 运行模式---插件
 1.运行后生成测试报告-2
 
 pytest+allure模式

@@ -3,7 +3,7 @@
 # 配合验证用例的执行
 
 import pytest
-
+@pytest.mark.skip
 class TestDemo:
     # @pytest.mark.test  可以用，但是会提示警告。因为test是自己随便写的标签，不是官方的标签。
     # @pytest.mark.skip

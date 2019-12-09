@@ -5,7 +5,7 @@
 
 import pytest
 
-
+@pytest.mark.skip
 class TestDemo:
     def func(self,x):
         return x+1

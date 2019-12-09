@@ -2,8 +2,15 @@
 二、用例执行
 1.在pycharm的Terminal执行用例：
 默认路径即当前项目，如rootdir: /Users/hehuaimei/PycharmProjects/python_appium
-（也可以在cmd执行，先cd进入项目目录）
+补充：其他2种执行方式
+（1）也可以在cmd执行，先cd进入项目目录
+（2）py文件内执行，需要有__main_方法，见test_04
+（备注：测试用例可以写在类中，也可以不需要类直接写在函数中）
+如：
+if __name__=="__main__":
+    pytest.main("-s test_04.py")
 
+pycharm的Terminal执行命令如下：
 -->pytest
 当前路径下的用例全部执行
 pytest_leaning/test_01.py ..                                                                                                       [ 50%]
