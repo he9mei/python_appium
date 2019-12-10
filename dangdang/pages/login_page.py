@@ -1,7 +1,8 @@
-from selenium.webdriver.common.by import By
 
-from dangdang.base.base_prepare import driver
+class ElementLogin():
+    # by_el = By.ID("com.dangdang.reader:id/tab_personal_iv")  #用法不对，这个是java中的用法
+    id_tab_personal="com.dangdang.reader:id/tab_personal_iv"
+    id_nickname_input="com.dangdang.reader:id/nickname_tv"
 
-# tab_personal = driver.find_element_by_id("com.dangdang.reader:id/tab_personal_iv")
-# tab_personal = By.ID("com.dangdang.reader:id/tab_personal_iv")
-# by.id("")有问题，导入的包不对
+
+
