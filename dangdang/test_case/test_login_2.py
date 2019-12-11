@@ -5,7 +5,7 @@ import pytest
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
-from dangdang.base.base1 import BasePre  #导入包时应该from到py文件
+from dangdang.base.base_try_2py import BasePre  #导入包时应该from到py文件
 
 
 class TestLogin(BasePre):

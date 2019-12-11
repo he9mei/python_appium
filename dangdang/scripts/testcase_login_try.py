@@ -3,25 +3,45 @@ import os
 
 import pytest
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.by import By
 
-from dangdang.base.base import BasePre
+from dangdang.base.base_try_3 import BasePre  #导入包时应该from到py文件
 from dangdang.pages.login_page import ElementLogin
-from dangdang.method.method import AppiumMethod
+from dangdang.method.method_try import AppiumMethod
 
 
 class TestLogin(BasePre):
-
-    def test_01(self):
-        global driver, method
+    '''
+    def init(self):
+        global driver
+        # global method
         driver = BasePre.get_driver()
+        # method = AppiumMethod()
+    '''
+    def test_01(self):
+        #进入登录页面
+        # 可以通过继承父类属性的方式获得self.driver，也可以通过自己写的get_driver方法，
+        # 但是都需要在set_up执行之后，driver才会被赋予已经启动的driver的值，不可重复启动
+        global driver, method
+        # driver=self.driver
+        driver=BasePre.get_driver()
         method = AppiumMethod()
+        #AppiumMethod需要实例化一次才能得到driver的值，因为我把获取driver的方法写在AppiumMethod构造方法中了
 
-        # 进入登录页面
+        # driver.find_element_by_id("com.dangdang.reader:id/tab_personal_iv").click()
+        # el="com.dangdang.reader:id/tab_personal_iv"
+        # driver.find_element_by_id(el).click()
+        # driver.find_element_by_id(ElementLogin.id_tab_personal).click()
+        # driver.find_element(By.ID,ElementLogin.id_tab_personal).click()
+        # AppiumMethod.click_by_id(driver,ElementLogin.id_tab_personal)
+        # AppiumMethod.click_by_id(ElementLogin.id_tab_personal)
+        # AppiumMethod().click_by_id(ElementLogin.id_tab_personal)
+        # AppiumMethod().click_by_id("com.dangdang.reader:id/tab_personal_iv")
         method.click_by_id(ElementLogin.id_tab_personal)
-        method.click(By.ID,ElementLogin.id_nickname_input)
+        driver.find_element_by_id("com.dangdang.reader:id/nickname_tv").click()
+        # AppiumMethod().click_by_id(driver,value=ElementLogin.id_nickname_input)
 
-    # @pytest.mark.skip()
+    @pytest.mark.skip()
     def test_02(self):
         # driver = self.driver  #在第1个用例申明driver为global，则后面无需再定义
         # 默认如果没有进入账号密码登录，先点击账号密码登录
