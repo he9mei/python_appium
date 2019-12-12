@@ -23,17 +23,14 @@ class TestLogin(BasePre):
 
     # @pytest.mark.skip()
     def test_02(self):
-        # driver = self.driver  #在第1个用例申明driver为global，则后面无需再定义
         # 默认如果没有进入账号密码登录，先点击账号密码登录
         try:
             el_pw_login = driver.find_element_by_id("com.dangdang.reader:id/custom_login_tv")
             if el_pw_login .is_displayed():
                 print("默认进入短信验证码登录，找到了账号登录按钮！")
                 el_pw_login .click()
-        # except Exception as e:  #如果不打印异常会提示异常太宽泛
         except NoSuchElementException:
             print("可能默认就是账号密码登录！")
-            # print(e)
         
         # 切换输入法
         os.system("adb shell ime set io.appium.android.ime/.UnicodeIME")
@@ -46,9 +43,7 @@ class TestLogin(BasePre):
         el_pw_input.send_keys("111111")
 
         # 遇到问题：输入之后，键盘没有关闭，挡住了登录按钮
-        driver.press_keycode(4)  #通过强制返回关闭键盘
-        # driver.hide_keyboard()   # appium自己有关闭键盘的方法
-        # ---此处用此方法报错Soft keyboard not present, cannot hide keyboard
+        driver.press_keycode(4)   # 通过强制返回关闭键盘
 
         driver.find_element_by_id("com.dangdang.reader:id/login_tv").click()
 

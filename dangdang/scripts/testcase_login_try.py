@@ -20,7 +20,8 @@ class TestLogin(BasePre):
     '''
     def test_01(self):
         #进入登录页面
-        # 可以通过继承父类属性的方式获得self.driver，也可以通过自己写的get_driver方法，
+        # 可以通过继承父类属性的方式获得self.driver，(用继承获取的化，需要父类也要定义self.driver)
+        # 也可以通过自己写的get_driver方法，
         # 但是都需要在set_up执行之后，driver才会被赋予已经启动的driver的值，不可重复启动
         global driver, method
         # driver=self.driver

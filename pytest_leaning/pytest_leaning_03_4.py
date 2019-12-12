@@ -23,4 +23,9 @@ pytest插件补充：
 在被测用例前加上
 @pytest.mark.run(order=x)时，@pyetest.mark下实际无法找到run标记，但是执行没有报错。
 
+3.失败重跑--前面已介绍
+安装：pip3 install pytest-rerunfailues
+补充：使用时可以把命令 --reruns=2 加到pytest.ini文件中
+练习见test_08.py
+
 '''
