@@ -34,4 +34,5 @@ def test_shoping(login):
     print("测试购物")
 
 实例：使用fixture实现setup和teardown
+见test_12.py
 '''
