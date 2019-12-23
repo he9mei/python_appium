@@ -11,7 +11,7 @@ class 类：
 '''
 
 import pytest
-@pytest.fixture()
+@pytest.fixture(scope="module")
 def before():
     print("---before---")
 @pytest.mark.usefixtures("before")
