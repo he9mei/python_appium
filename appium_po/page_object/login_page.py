@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 from appium_po.base.base_page import Base
 from appium_po.page_object.personal_page import Personal
 from appium_po.page_object.settings_page import Settings
@@ -20,14 +21,13 @@ class Login(Base):
             if self.is_displayed(*self.el_custom_login_enter):
                 print("找到账号密码登录入口！")
                 self.click(*self.el_custom_login_enter)
-        except Exception as e:
-            print(e)
+        except NoSuchElementException:
             print("没有找到账号密码登录入口，可能默认已经进入了该页面。")
 
     def custom_login(self,account,pw):
         self.send_keys(account, *self.el_name_input)
         self.send_keys(pw, *self.el_pw_input)
-        self.driver.press_keycode(4)  #点击登录时虚拟键盘没有自动关闭
+        # self.driver.press_keycode(4)  #华为手机点击登录时虚拟键盘没有自动关闭，乐蒙手机是好的
         self.click(*self.el_private_switch)  # 新版本需要勾选
         self.click(*self.el_login_bn)
 

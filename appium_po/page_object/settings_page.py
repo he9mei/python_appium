@@ -1,3 +1,5 @@
+from selenium.common.exceptions import NoSuchElementException
+
 from appium_po.base.base_page import Base
 from selenium.webdriver.common.by import By
 from appium_po.page_object.personal_page import Personal
@@ -20,8 +22,8 @@ class Settings(Base):
                 print("找到退出登录按钮!")
                 self.click(*self.el_logout_bn)
                 sleep(2)
-        except Exception as e:
-            print(e)
+        except NoSuchElementException:
+            # print(e)
             print("找不到退出按钮，可能目前未登录。")
         finally:
             self.click(*Common.el_back_bn)

@@ -8,8 +8,10 @@ caps = {
     "platformName": "Android",
     # "platformVersion": "8.0.0",  #华为手机
     # "deviceName": "HMKNW17727007061",
-    "platformVersion": "7.1.1",  #OPPO手机
-    "deviceName": "MJA68TGES4S4SKAY",
+    # "platformVersion": "7.1.1",  #OPPO手机
+    # "deviceName": "MJA68TGES4S4SKAY",
+    "platformVersion": "5.1",  #乐蒙手机
+    "deviceName": "MUGW8SOWWEY75NNDM",
     "appPackage": "com.dangdang.reader",  #adb shell pm list package -3
     "appActivity": ".activity.GuideActivity",  #adb shell dumpsys activity |grep com.dangdang.reader |grep LAUNCHER
     "noReset": True
