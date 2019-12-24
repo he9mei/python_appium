@@ -4,13 +4,16 @@ from appium import webdriver
 from time import sleep
 
 caps = {
-    "automationName":"Appium",
-    "platformName":"Android",
-    "platformVersion":"8.0.0",
-    "deviceName":"HMKNW17727007061",
-    "appPackage":"com.dangdang.reader",  #adb shell pm list package -3
-    "appActicity":".activity.GuideActivity",  #adb shell dumpsys activity |grep com.dangdang.reader |grep LAUNCHER
-    "noReset": True}
+    "automationName": "Appium",
+    "platformName": "Android",
+    # "platformVersion": "8.0.0",  #华为手机
+    # "deviceName": "HMKNW17727007061",
+    "platformVersion": "7.1.1",  #OPPO手机
+    "deviceName": "MJA68TGES4S4SKAY",
+    "appPackage": "com.dangdang.reader",  #adb shell pm list package -3
+    "appActivity": ".activity.GuideActivity",  #adb shell dumpsys activity |grep com.dangdang.reader |grep LAUNCHER
+    "noReset": True
+}
 
 
 @pytest.fixture(scope="session")
@@ -20,13 +23,30 @@ def driver(request):
     print("启动driver")
 
     def end():
-        driver.qiut()
         sleep(5)
+        driver.quit()
+        print("关闭driver")
 
     request.addfinalizer(end)
     return driver
 
+'''
+def test_1(driver):
+    print("测试用例")
 
 
+if __name__ == '__main__':
+    pytest.main("-s conftest.py")
+'''
 
-
+'''
+#也可以写成这种格式，先定义一个字典，再加数据
+caps = {}
+caps["automationName"] = "Appium"
+caps["platformName"] = "Android"
+caps["platformVersion"] = "8.0.0"
+caps["deviceName"] = "HMKNW17727007061"
+caps["appPackage"] = "com.dangdang.reader"
+caps["appActivity"] = ".activity.GuideActivity"
+caps["noReset"] = "true"   #"true"或者True都可以，但是如果不写这个，每次启动都会清缓存重新启动
+'''
