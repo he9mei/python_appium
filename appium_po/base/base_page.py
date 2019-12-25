@@ -1,10 +1,12 @@
 
 from appium import webdriver
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-from appium_po.conftest import caps
 import os
 from time import sleep
+from appium_po.conftest import caps
 
 class Base(object):
     def __init__(self, driver):
@@ -35,30 +37,97 @@ class Base(object):
         try:
             # if self.driver.find_element(*locator).is_displayed():
             assert self.driver.find_element(*locator).is_displayed()
-            # print("元素出现")
+            print(f"元素出现:{locator}")
             return True
         # except NoSuchElementException:
         except AssertionError:
             print(f"元素未出现:{locator}")
             return False
 
-    def sys_input_method(self, method_name):
+    @staticmethod
+    def wait(t):
+        '''强制等待'''
+        sleep(t)
+        print(f"等待{t}s")
+
+    def implicitly_wait(self,t):
+        '''隐式等待'''
+        self.driver.implicitly_wait(t)
+        print(f"隐式等待{t}s")
+
+    def explicitly_wait(self,t,*locator):
+        '''显式等待'''
+        try:
+            el=WebDriverWait(self.driver,t,0.5).until(EC.visibility_of_element_located(*locator))
+            print(f"显式等待-元素出现：{locator}")
+            return el
+        except NoSuchElementException:
+            print(f"显示等待-元素未出现：{locator}")
+
+    @staticmethod
+    def sys_input_method(method_name):
         '''切换手机系统的输入法'''
         if method_name=="appiumUnicode":
             os.system("adb shell ime set io.appium.android.ime/.UnicodeIME")
         if method_name=="baidu":
             os.system("adb shell ime set com.baidu.input_huawei/.ImeService")
 
-    def swipe_up(self,n):
+    def swipe_up(self,n=1,t=500):
         s=self.driver.get_window_size()
-        print(s)
+        # print(f"屏幕尺寸是：{s}")
         start_x = s['width']*1/2
-        start_y = s['height']*2/5
+        start_y = s['height']*4/5
         end_x = s['width']*1/2
         end_y = s['height']*1/5
-        t = 500
         for i in range(n):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
             print(f"向上滑动{i+1}次")
 
+    def swipe_down(self,n=1,t=500):
+        s=self.driver.get_window_size()
+        # print(f"屏幕尺寸是：{s}")
+        start_x = s['width']*1/2
+        start_y = s['height']*1/5
+        end_x = s['width']*1/2
+        end_y = s['height']*4/5
+        for i in range(n):
+            self.driver.swipe(start_x,start_y,end_x,end_y,t)
+            print(f"向下滑动{i+1}次")
+
+    def swipe_left(self,n=1,t=500):
+        s=self.driver.get_window_size()
+        start_x=s['width']*4/5
+        start_y=s['height']*1/2
+        end_x=s['width']*1/5
+        end_y=s['height']*1/2
+        for i in range(n):
+            self.driver.swipe(start_x,start_y,end_x,end_y,t)
+            print(f"向左滑动{i+1}次")
+
+    def swipe_right(self,n=1,t=500):
+        s = self.driver.get_window_size()
+        start_x = s['width'] * 1/5
+        start_y = s['height'] * 1/2
+        end_x = s['width'] * 4/5
+        end_y = s['height'] * 1/2
+        for i in range(n):
+            self.driver.swipe(start_x, start_y, end_x, end_y, t)
+            print(f"向右滑动{i+1}次")
+
+    def swipe_up_to_el(self,t=500,*locator):
+        '''向上滑动直到找到某个元素'''
+        s=self.driver.get_window_size()
+        start_x=s['width']*1/2
+        start_y=s['height']*3/5
+        end_x=s['width']*1/2
+        end_y=s['height']*4/5
+
+        for i in range(20):
+            if self.is_displayed(*locator):
+                break
+            else:
+                self.driver.swipe(start_x,start_y,end_x,end_y,t)
+                print(f"向上缓慢滑动{i+1}次")
+        else:
+            print("滑动到元素失败，找不到元素。")
 

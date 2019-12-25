@@ -12,16 +12,15 @@ class Settings(Base):
     def settings_enter(self):
         self.click(*Personal.el_tab_personal)
         self.click(*Personal.el_settings_enter)
-        sleep(1)
 
     def logout(self):
         self.settings_enter()
-        self.swipe_up(1)
+        self.swipe_up()
         try:
             if self.is_displayed(*self.el_logout_bn):
                 print("找到退出登录按钮!")
                 self.click(*self.el_logout_bn)
-                sleep(2)
+                self.wait(2)
         except NoSuchElementException:
             # print(e)
             print("找不到退出按钮，可能目前未登录。")
