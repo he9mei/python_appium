@@ -1,6 +1,6 @@
 
 from appium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -55,14 +55,17 @@ class Base(object):
         self.driver.implicitly_wait(t)
         print(f"隐式等待{t}s")
 
-    def explicitly_wait(self,t,*locator):
+    def explicitly_wait(self,t,locator):
         '''显式等待'''
+        #此处locator不需要定义为*,源代码_find_element(driver, by)就直接使用的locator，直接可以接收元组。
         try:
-            el=WebDriverWait(self.driver,t,0.5).until(EC.visibility_of_element_located(*locator))
+            el=WebDriverWait(self.driver,t,0.5).until(EC.visibility_of_element_located(locator))
             print(f"显式等待-元素出现：{locator}")
             return el
         except NoSuchElementException:
             print(f"显示等待-元素未出现：{locator}")
+        except TimeoutException:
+            print("显示等待-time out")
 
     @staticmethod
     def sys_input_method(method_name):
@@ -81,7 +84,8 @@ class Base(object):
         end_y = s['height']*1/5
         for i in range(n):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
-            print(f"向上滑动{i+1}次")
+            print(f"向上滑动第{i+1}次")
+            sleep(1)
 
     def swipe_down(self,n=1,t=500):
         s=self.driver.get_window_size()
@@ -92,7 +96,8 @@ class Base(object):
         end_y = s['height']*4/5
         for i in range(n):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
-            print(f"向下滑动{i+1}次")
+            print(f"向下滑动第{i+1}次")
+            sleep(1)
 
     def swipe_left(self,n=1,t=500):
         s=self.driver.get_window_size()
@@ -102,7 +107,8 @@ class Base(object):
         end_y=s['height']*1/2
         for i in range(n):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
-            print(f"向左滑动{i+1}次")
+            print(f"向左滑动第{i+1}次")
+            sleep(1)
 
     def swipe_right(self,n=1,t=500):
         s = self.driver.get_window_size()
@@ -112,7 +118,8 @@ class Base(object):
         end_y = s['height'] * 1/2
         for i in range(n):
             self.driver.swipe(start_x, start_y, end_x, end_y, t)
-            print(f"向右滑动{i+1}次")
+            print(f"向右滑动第{i+1}次")
+            sleep(1)
 
     def swipe_up_to_el(self,t=500,*locator):
         '''向上滑动直到找到某个元素'''
@@ -123,11 +130,15 @@ class Base(object):
         end_y=s['height']*4/5
 
         for i in range(20):
-            if self.is_displayed(*locator):
+            try:
+                assert self.driver.find_element(*locator).is_displayed()
+                print(f"滑动到元素-成功:{locator}")
                 break
-            else:
-                self.driver.swipe(start_x,start_y,end_x,end_y,t)
-                print(f"向上缓慢滑动{i+1}次")
+            except AssertionError:
+                pass
+            self.driver.swipe(start_x,start_y,end_x,end_y,t)
+            print(f"向上缓慢滑动第{i+1}次")
         else:
-            print("滑动到元素失败，找不到元素。")
+            print(f"滑动到元素-失败:{locator}")
+        sleep(1)
 
