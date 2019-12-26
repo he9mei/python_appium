@@ -22,6 +22,7 @@ class Base(object):
         except NoSuchElementException:
             print(f"找不到元素：{locator}")
 
+
     def click(self, *locator):
         self.locator_element(*locator).click()
         print(f"点击元素:{locator}")
@@ -57,7 +58,7 @@ class Base(object):
 
     def explicitly_wait(self,t,locator):
         '''显式等待'''
-        #此处locator不需要定义为*,源代码_find_element(driver, by)就直接使用的locator，直接可以接收元组。
+        #此处locator不需要定义为*,源代码_find_element(driver, by)就直接使用的locator，貌似直接可以接收元组。
         try:
             el=WebDriverWait(self.driver,t,0.5).until(EC.visibility_of_element_located(locator))
             print(f"显式等待-元素出现：{locator}")
@@ -101,6 +102,7 @@ class Base(object):
 
     def swipe_left(self,n=1,t=500):
         s=self.driver.get_window_size()
+        # print(f"屏幕尺寸是：:{s}")
         start_x=s['width']*4/5
         start_y=s['height']*1/2
         end_x=s['width']*1/5
@@ -112,6 +114,7 @@ class Base(object):
 
     def swipe_right(self,n=1,t=500):
         s = self.driver.get_window_size()
+        # print(f"屏幕尺寸是：:{s}")
         start_x = s['width'] * 1/5
         start_y = s['height'] * 1/2
         end_x = s['width'] * 4/5
@@ -121,23 +124,26 @@ class Base(object):
             print(f"向右滑动第{i+1}次")
             sleep(1)
 
-    def swipe_up_to_el(self,t=500,*locator):
+    # def swipe_up_to_el(self,t=100,*locator):  #默认值参数后面跟不定长参数，出错了。。。
+    def swipe_up_to_el(self, *locator):
         '''向上滑动直到找到某个元素'''
         s=self.driver.get_window_size()
+        print(f"屏幕尺寸是：:{s}")
         start_x=s['width']*1/2
-        start_y=s['height']*3/5
+        start_y=s['height']*8/10
         end_x=s['width']*1/2
-        end_y=s['height']*4/5
+        end_y=s['height']*5/10
+        t=500
 
         for i in range(20):
             try:
-                assert self.driver.find_element(*locator).is_displayed()
-                print(f"滑动到元素-成功:{locator}")
-                break
-            except AssertionError:
-                pass
+                if self.driver.find_element(*locator).is_displayed():
+                    print(f"滑动到元素-成功:{locator}")
+                    break
+            except NoSuchElementException:
+                print("滑动到元素-元素暂未出现")
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
-            print(f"向上缓慢滑动第{i+1}次")
+            print(f"滑动到元素-向上缓慢滑动第{i+1}次")
         else:
             print(f"滑动到元素-失败:{locator}")
         sleep(1)
