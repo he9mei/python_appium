@@ -7,10 +7,11 @@ class TestLogin(object):
 
     # @pytest.mark.parametrize("account,pw",[("18500228275","111111"),("hhm1@163.com","111111")])
     @pytest.mark.parametrize("account,pw", [("18500228275", "111111")])
-    def test_1_custom_login(self,driver,account,pw):
+    def test_1_custom_login(self,driver,logger,account,pw):
+        logger.info("---测试登录流程---")
         # print(f"获得conftest.py的driver是：{driver}")
-        login=Login(driver)
-        settings = Settings(driver)
+        login=Login(driver,logger)
+        settings = Settings(driver,logger)
         settings.logout()
         login.custom_login_enter()
         # login.custom_login("18500228275","111111")
@@ -18,7 +19,7 @@ class TestLogin(object):
 
 
 if __name__=="__main__":
-    pytest.main("-s -v --html=./report.html test_01_login.py")
+    pytest.main("-s -v --html=../test_result/report/report.html --reruns=2 test_01_login.py")
 '''
 先进入appium_po路径
 之前在selenium_po路径

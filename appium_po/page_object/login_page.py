@@ -17,10 +17,12 @@ class Login(Base):
         self.click(*Personal.el_nickname)
         try:
             if self.is_displayed(*self.el_custom_login_enter):
-                print("找到账号密码登录入口！")
+                # print("找到账号密码登录入口！")
+                self.logger.info("找到账号密码登录入口！")
                 self.click(*self.el_custom_login_enter)
         except NoSuchElementException:
-            print("没有找到账号密码登录入口，可能默认已经进入了该页面。")
+            # print("没有找到账号密码登录入口，可能默认已经进入了该页面。")
+            self.logger.info("没有找到账号密码登录入口，可能默认已经进入了该页面。")
 
     def custom_login(self,account,pw):
         self.send_keys(account, *self.el_name_input)

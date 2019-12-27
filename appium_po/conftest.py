@@ -3,6 +3,10 @@ import pytest
 from appium import webdriver
 from time import sleep
 
+import logging
+import logging.config
+
+
 caps = {
     "automationName": "Appium",
     "platformName": "Android",
@@ -52,3 +56,18 @@ caps["appPackage"] = "com.dangdang.reader"
 caps["appActivity"] = ".activity.GuideActivity"
 caps["noReset"] = "true"   #"true"或者True都可以，但是如果不写这个，每次启动都会清缓存重新启动
 '''
+
+#log配置有三种方法
+'''
+1.将配置写在log.conf配置文件，然后再读取配置返回logger。此处是写入fixture，用例直接将其传入。---未实现写入不同的文件名
+2.将配置写在代码中，然后再调用。好处是可以自己定义文件名，方便不同的类或者方法中的log写入不同文件。
+3.将配置写在py文件中，使用logging.basicConfig设置配置，传入level、filename、format等，不传入filename就会控制台输出。
+'''
+
+@pytest.fixture(scope="module")
+def logger():
+    CONF_LOG = "../log.conf"
+    logging.config.fileConfig(CONF_LOG)
+    logger = logging.getLogger()
+    print("---打印日志---")
+    return logger

@@ -15,15 +15,17 @@ class Settings(Base):
 
     def logout(self):
         self.settings_enter()
-        self.swipe_up()
+        self.swipe_up(2)
         try:
             if self.is_displayed(*self.el_logout_bn):
-                print("找到退出登录按钮!")
+                # print("找到退出登录按钮!")
+                self.logger.info("找到退出登录按钮!")
                 self.click(*self.el_logout_bn)
-                self.wait(2)
+                self.wait(3)
         except NoSuchElementException:
             # print(e)
-            print("找不到退出按钮，可能目前未登录。")
+            # print("找不到退出按钮，可能目前未登录。")
+            self.logger.info("找不到退出按钮，可能目前未登录。")
         finally:
             self.click(*Common.el_back_bn)
 

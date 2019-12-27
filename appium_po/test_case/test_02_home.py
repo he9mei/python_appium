@@ -5,8 +5,9 @@ from appium_po.base.base_page import Base
 import pytest
 
 class TestHomePage(object):
-    def test_my_home(self,driver):
-        home=Home(driver)
+    def test_my_home(self,driver,logger):
+        logger.info("---测试我的个人主页---")
+        home=Home(driver,logger)
         home.my_home_enter()
         home.my_publish()
 
