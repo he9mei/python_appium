@@ -12,16 +12,26 @@ from appium_po.conftest import caps
 class Base(object):
     def __init__(self, driver,logger):
         self.driver=driver
-        # self.driver=webdriver.Remote("http://localhost:4723/wd/hub",caps)
+        self.driver=webdriver.Remote("http://localhost:4723/wd/hub",caps)
         print(f"传入Base的driver是：{self.driver}")
         # self.logger=Log(self.__class__.__name__) #通过base下的log_conf.py文件内的配置，设置log---放在不同文件
         self.logger=logger  #通过log.conf文件内的配置+conftest.py文件接收配置，设置log---放在同一个文件
 
+#定位元素、点击、输入、判断是否存在
     def locator_element(self, *locator):
         '''定位元素'''
         try:
             el=self.driver.find_element(*locator)
             return el
+        except NoSuchElementException:
+            # print(f"找不到元素：{locator}")
+            self.logger.error("找不到元素："+str(locator))
+
+    def locator_elements(self, *locator):
+        '''定位元素'''
+        try:
+            el_list=self.driver.find_elements(*locator)
+            return el_list
         except NoSuchElementException:
             # print(f"找不到元素：{locator}")
             self.logger.error("找不到元素："+str(locator))
@@ -52,6 +62,16 @@ class Base(object):
             self.logger.error("元素未出现："+str(locator))
             return False
 
+#获取元素list、按照index点击、随机点击
+    def click_index(self,*locator):
+        el_list=self.locator_elements(*locator)
+        
+
+#截图、获取toast
+
+#断言文字(gettext,iscontains等等)？
+
+#三种等待：强制等待、隐式等待、显示等待
     # @staticmethod
     def wait(self,t):
         '''强制等待'''
@@ -80,6 +100,7 @@ class Base(object):
             # print("显示等待-time out")
             self.logger.info("显示等待-time out")
 
+#切换手机系统输入法，实际相当于是在终端输入相应命令，利用os.system
     @staticmethod
     def sys_input_method(method_name):
         '''切换手机系统的输入法'''
@@ -88,6 +109,7 @@ class Base(object):
         if method_name=="baidu":
             os.system("adb shell ime set com.baidu.input_huawei/.ImeService")
 
+#滑动：向上、向下、向左、向右滑动，向上滑动到某个元素
     def swipe_up(self,n=1,t=500):
         s=self.driver.get_window_size()
         # print(f"屏幕尺寸是：{s}")

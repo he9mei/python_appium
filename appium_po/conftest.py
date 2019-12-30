@@ -57,7 +57,7 @@ caps["appActivity"] = ".activity.GuideActivity"
 caps["noReset"] = "true"   #"true"或者True都可以，但是如果不写这个，每次启动都会清缓存重新启动
 '''
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def logger():
     CONF_LOG = "../log.conf"
     logging.config.fileConfig(CONF_LOG)

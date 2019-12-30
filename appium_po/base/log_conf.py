@@ -1,4 +1,6 @@
 # python日志
+# ---以下是配置log的第2种方式，调用的时候需要实例化，我暂时没有用这种方式；
+# 我目前直接用的log.conf配置文件，文件的解析写在conftest.py中了，加上fixture装饰器，使用时直接当成参数传入。
 # coding=utf-8
 import logging
 import sys
