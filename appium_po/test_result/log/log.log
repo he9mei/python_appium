@@ -1,37 +1,80 @@
-2019-12-27 18:05:57,265-test_01_login.py-INFO-[line:11]----测试登录流程---
-2019-12-27 18:06:09,693-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
-2019-12-27 18:06:09,907-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
-2019-12-27 18:06:10,314-base_page.py-INFO-[line:101]-向上滑动第1次
-2019-12-27 18:06:21,704-settings_page.py-INFO-[line:28]-找不到退出按钮，可能目前未登录。
-2019-12-27 18:06:22,238-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/common_back')
-2019-12-27 18:06:26,486-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
-2019-12-27 18:06:36,779-base_page.py-ERROR-[line:27]-找不到元素：('id', 'com.dangdang.reader:id/nickname_tv')
-2019-12-27 18:10:41,132-test_01_login.py-INFO-[line:11]----测试登录流程---
-2019-12-27 18:10:52,107-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
-2019-12-27 18:10:53,356-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
-2019-12-27 18:10:53,598-base_page.py-INFO-[line:101]-向上滑动第1次
-2019-12-27 18:10:54,841-base_page.py-INFO-[line:101]-向上滑动第2次
-2019-12-27 18:10:55,894-base_page.py-INFO-[line:47]-元素出现：('id', 'com.dangdang.reader:id/login')
-2019-12-27 18:10:55,894-settings_page.py-INFO-[line:22]-找到退出登录按钮!
-2019-12-27 18:10:56,055-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/login')
-2019-12-27 18:10:59,057-base_page.py-INFO-[line:60]-等待：3s
-2019-12-27 18:11:02,217-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/common_back')
-2019-12-27 18:11:05,390-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
-2019-12-27 18:11:05,738-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
-2019-12-27 18:11:16,572-login_page.py-INFO-[line:25]-没有找到账号密码登录入口，可能默认已经进入了该页面。
-2019-12-27 18:11:26,650-base_page.py-INFO-[line:39]-元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
-2019-12-27 18:11:35,280-base_page.py-INFO-[line:39]-元素：('id', 'com.dangdang.reader:id/password_et') 输入：111111
-2019-12-27 18:11:35,964-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/private_switch_btn')
-2019-12-27 18:11:36,616-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
-2019-12-27 18:14:06,286-test_02_home.py-INFO-[line:9]----测试我的个人主页---
-2019-12-27 18:20:39,053-test_02_home.py-INFO-[line:9]----测试我的个人主页---
-2019-12-27 18:20:50,057-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
-2019-12-27 18:20:52,684-base_page.py-INFO-[line:32]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
-2019-12-27 18:21:04,149-base_page.py-INFO-[line:74]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
-2019-12-27 18:21:14,419-base_page.py-INFO-[line:162]-滑动到元素-元素暂未出现
-2019-12-27 18:21:14,651-base_page.py-INFO-[line:165]-滑动到元素-向上缓慢滑动第1次
-2019-12-27 18:21:26,678-base_page.py-INFO-[line:162]-滑动到元素-元素暂未出现
-2019-12-27 18:21:26,927-base_page.py-INFO-[line:165]-滑动到元素-向上缓慢滑动第2次
-2019-12-27 18:21:45,611-base_page.py-INFO-[line:162]-滑动到元素-元素暂未出现
-2019-12-27 18:21:45,859-base_page.py-INFO-[line:165]-滑动到元素-向上缓慢滑动第3次
-2019-12-27 18:21:47,503-base_page.py-INFO-[line:158]-滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 18:49:51,826-test_02_home.py-INFO-[line:10]----测试我的个人主页---
+2019-12-30 18:50:02,729-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 18:50:04,979-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 18:50:06,305-base_page.py-INFO-[line:121]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-30 18:50:22,193-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 18:50:22,430-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第1次
+2019-12-30 18:50:39,812-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 18:50:40,054-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第2次
+2019-12-30 18:50:52,093-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 18:50:52,327-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第3次
+2019-12-30 18:50:54,086-base_page.py-INFO-[line:207]-滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 18:50:56,092-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 18:50:56,637-base_page.py-INFO-[line:84]-按序号点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 18:50:57,642-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 18:51:00,909-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/bar_info_title_back')
+2019-12-30 18:52:39,979-test_02_home.py-INFO-[line:10]----测试我的个人主页---
+2019-12-30 18:52:50,882-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 18:52:51,780-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 20:04:41,327-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-30 20:04:56,307-base_page.py-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:11:01,132-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-30 20:11:12,073-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:11:13,634-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 20:11:24,569-base_page.py-INFO-[line:121]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-30 20:11:39,323-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:11:39,576-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第1次
+2019-12-30 20:11:59,326-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:11:59,576-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第2次
+2019-12-30 20:12:11,565-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:12:11,817-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第3次
+2019-12-30 20:12:13,512-base_page.py-INFO-[line:207]-滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:12:15,519-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:12:16,150-base_page.py-INFO-[line:84]-按序号点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:12:17,155-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:12:20,305-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/bar_info_title_back')
+2019-12-30 20:12:20,722-base_page.py-INFO-[line:91]-随机点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:12:21,723-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:12:32,023-base_page.py-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/common_back')
+2019-12-30 20:21:15,408-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-30 20:21:26,346-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:21:27,693-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 20:21:29,141-base_page.py-INFO-[line:121]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-30 20:21:39,522-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:21:39,790-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第1次
+2019-12-30 20:21:51,778-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:21:52,030-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第2次
+2019-12-30 20:22:10,099-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:22:10,344-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第3次
+2019-12-30 20:22:12,072-base_page.py-INFO-[line:207]-滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:22:14,076-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:22:14,609-base_page.py-INFO-[line:84]-按序号点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:22:15,614-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:22:19,017-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/bar_info_title_back')
+2019-12-30 20:22:19,464-base_page.py-INFO-[line:91]-随机点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:22:20,468-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:22:30,760-base_page.py-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/common_back')
+2019-12-30 20:24:12,966-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-30 20:24:23,995-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:24:24,438-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 20:24:25,953-base_page.py-INFO-[line:121]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-30 20:24:36,310-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:24:36,549-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第1次
+2019-12-30 20:24:48,533-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:24:48,774-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第2次
+2019-12-30 20:25:00,915-base_page.py-INFO-[line:211]-滑动到元素-元素暂未出现
+2019-12-30 20:25:01,148-base_page.py-INFO-[line:214]-滑动到元素-向上缓慢滑动第3次
+2019-12-30 20:25:02,882-base_page.py-INFO-[line:207]-滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:25:04,890-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:25:05,451-base_page.py-INFO-[line:84]-按序号点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:25:06,453-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:25:09,824-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/bar_info_title_back')
+2019-12-30 20:25:10,722-base_page.py-INFO-[line:91]-随机点击元素[3]：('id', 'com.dangdang.reader:id/pay_rl')
+2019-12-30 20:25:11,724-base_page.py-INFO-[line:107]-等待：1s
+2019-12-30 20:25:14,898-base_page.py-INFO-[line:36]-点击元素:('id', 'com.dangdang.reader:id/bar_info_title_back')
+2019-12-30 20:55:24,445-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-30 20:55:33,887-base_page.py-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:56:01,604-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-30 20:56:06,456-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:56:07,970-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 20:56:18,909-base_page.py-INFO-[line:129]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')

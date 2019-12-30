@@ -1,1 +1,4 @@
-2019-12-27 18:06:36,779-base_page.py-ERROR-[line:27]-找不到元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-30 20:04:56,307-base_page.py-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-30 20:12:32,023-base_page.py-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/common_back')
+2019-12-30 20:22:30,760-base_page.py-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/common_back')
+2019-12-30 20:55:33,887-base_page.py-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')

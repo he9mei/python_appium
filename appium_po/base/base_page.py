@@ -3,19 +3,23 @@ from appium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+# from time import sleep,strftime,localtime,time
+import time
 import os
-from time import sleep
+import random
+
 from appium_po.conftest import caps
 # from appium_po.base.log_conf import Log
+import logging
 
 class Base(object):
     def __init__(self, driver,logger):
         self.driver=driver
-        self.driver=webdriver.Remote("http://localhost:4723/wd/hub",caps)
+        # self.driver=webdriver.Remote("http://localhost:4723/wd/hub",caps)  #跑用例需要注释掉
         print(f"传入Base的driver是：{self.driver}")
         # self.logger=Log(self.__class__.__name__) #通过base下的log_conf.py文件内的配置，设置log---放在不同文件
         self.logger=logger  #通过log.conf文件内的配置+conftest.py文件接收配置，设置log---放在同一个文件
+        # self.logger=logging.getLogger()   #跑用例需要注释掉
 
 #定位元素、点击、输入、判断是否存在
     def locator_element(self, *locator):
@@ -27,19 +31,23 @@ class Base(object):
             # print(f"找不到元素：{locator}")
             self.logger.error("找不到元素："+str(locator))
 
-    def locator_elements(self, *locator):
-        '''定位元素'''
-        try:
-            el_list=self.driver.find_elements(*locator)
-            return el_list
-        except NoSuchElementException:
-            # print(f"找不到元素：{locator}")
-            self.logger.error("找不到元素："+str(locator))
-
     def click(self, *locator):
         self.locator_element(*locator).click()
         # print(f"点击元素:{locator}")
-        self.logger.info("点击元素:"+str(locator))
+        self.logger.info("点击元素:" + str(locator))
+        '''
+        # 验证问题：找元素是已经做了异常处理，每一个方法封装时还需要做异常处理吗？以下是出现异常时的情况
+        总结：不需要再做异常处理
+        try:
+            # if self.driver.find_element(*locator).is_displayed():  # 找不到元素，无法点击  passed
+            # if self.locator_element(*locator).is_displayed(): #找不到元素 failed (与以上不加异常处理，效果相同)
+            if self.is_displayed(*locator):  # 找不到元素，无法点击  passed
+                self.locator_element(*locator).click()
+                 # print(f"点击元素:{locator}")
+                self.logger.info("点击元素:"+str(locator))
+        except NoSuchElementException:
+            self.logger.info("找不到元素，无法点击")
+        '''
 
     def send_keys(self, text, *locator):
         self.sys_input_method("appiumUnicode")
@@ -63,11 +71,39 @@ class Base(object):
             return False
 
 #获取元素list、按照index点击、随机点击
-    def click_index(self,*locator):
+    def locator_elements(self, *locator):
+        '''定位元素list'''
+        try:
+            el_list=self.driver.find_elements(*locator)
+            return el_list
+        except NoSuchElementException:
+            self.logger.error("找不到元素："+str(locator))
+
+    def click_index(self,index,*locator):
         el_list=self.locator_elements(*locator)
-        
+        el_list[index].click()
+        self.logger.info("按序号点击元素["+str(index)+"]："+str(locator))
+
+    def click_random(self,*locator):
+        el_list=self.locator_elements(*locator)
+        n=len(el_list)  #len(list)获取列表长度
+        index=random.randint(0,n-1)  #生成列表长度内的随机数;random.randint(a,b) 包含 a和b
+        el_list[index].click()
+        self.logger.info("随机点击元素["+str(index)+"]："+str(locator))
 
 #截图、获取toast
+    def get_screenshot(self,name):
+        day=time.strftime("%Y-%m-%d",time.localtime(time.time()))
+        tm=time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))
+        fq="../test_result/screentshot/"+day
+        if os.path.exists(fq):
+            filename=fq+"/"+tm+name+".png"
+        else:
+            os.makedirs(fq)
+            filename=fq+"/"+tm+name+".png"
+        self.driver.get_screenshot_as_file(filename)
+        self.logger.info("截图成功："+name)
+
 
 #断言文字(gettext,iscontains等等)？
 
@@ -75,7 +111,7 @@ class Base(object):
     # @staticmethod
     def wait(self,t):
         '''强制等待'''
-        sleep(t)
+        time.sleep(t)
         # print(f"等待{t}s")
         self.logger.info("等待："+str(t)+"s")
 
@@ -121,7 +157,7 @@ class Base(object):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
             # print(f"向上滑动第{i+1}次")
             self.logger.info("向上滑动第"+str(i+1)+"次")
-            sleep(1)
+            self.wait(1)
 
     def swipe_down(self,n=1,t=500):
         s=self.driver.get_window_size()
@@ -134,7 +170,7 @@ class Base(object):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
             # print(f"向下滑动第{i+1}次")
             self.logger.info("向下滑动第" + str(i + 1) + "次")
-            sleep(1)
+            self.wait(1)
 
     def swipe_left(self,n=1,t=500):
         s=self.driver.get_window_size()
@@ -147,7 +183,7 @@ class Base(object):
             self.driver.swipe(start_x,start_y,end_x,end_y,t)
             # print(f"向左滑动第{i+1}次")
             self.logger.info("向左滑动第" + str(i + 1) + "次")
-            sleep(1)
+            self.wait(1)
 
     def swipe_right(self,n=1,t=500):
         s = self.driver.get_window_size()
@@ -160,7 +196,7 @@ class Base(object):
             self.driver.swipe(start_x, start_y, end_x, end_y, t)
             # print(f"向右滑动第{i+1}次")
             self.logger.info("向右滑动第" + str(i + 1) + "次")
-            sleep(1)
+            self.wait(1)
 
     # def swipe_up_to_el(self,t=100,*locator):  #默认值参数后面跟不定长参数，出错了。。。
     def swipe_up_to_el(self, *locator):
@@ -188,5 +224,5 @@ class Base(object):
         else:
             # print(f"滑动到元素-失败:{locator}")
             self.logger.info("滑动到元素-失败：" + str(locator))
-        sleep(1)
+        self.wait(1)
 
