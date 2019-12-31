@@ -8,7 +8,8 @@ import logging.config
 
 
 caps = {
-    "automationName": "Appium",
+    # "automationName": "Appium",
+    "automationName": "UIAutomator2",
     "platformName": "Android",
     # "platformVersion": "8.0.0",  #华为手机
     # "deviceName": "HMKNW17727007061",

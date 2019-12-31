@@ -3,6 +3,7 @@ from appium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 # from time import sleep,strftime,localtime,time
 import time
 import os
@@ -92,17 +93,35 @@ class Base(object):
         self.logger.info("随机点击元素["+str(index)+"]："+str(locator))
 
 #截图、获取toast
+# 注意点：
+# 1、给定截图的名称为中文，则需添加u，如：get_screenShot(u"个人主页")，否则截图保存的文件名称乱；---貌似不写也没问题
+# 2、若给定的截图名称为英文，则不需添加U
     def get_screenshot(self,name):
         day=time.strftime("%Y-%m-%d",time.localtime(time.time()))
-        tm=time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))
+        # tm=time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))  #图片文件名加上日期和时间
+        tm=time.strftime("%H_%M_%S",time.localtime(time.time()))  #由于文件夹是以日期命名的，文件名省去日期
         fq="../test_result/screentshot/"+day
-        if os.path.exists(fq):
-            filename=fq+"/"+tm+name+".png"
-        else:
-            os.makedirs(fq)
-            filename=fq+"/"+tm+name+".png"
-        self.driver.get_screenshot_as_file(filename)
-        self.logger.info("截图成功："+name)
+        try:
+            if os.path.exists(fq):
+                filename=fq+"/"+tm+"_"+name+".png"
+            else:
+                os.makedirs(fq)
+                filename=fq+"/"+tm+"_"+name+".png"
+            self.driver.get_screenshot_as_file(filename)
+            self.logger.info("截图成功："+name)
+        except Exception as e:
+            self.logger.error("截图失败:"+name)
+            print(e)
+
+    def get_toast(self,text):
+        try:
+            el_toast=(By.XPATH,"//*[contains(@text,'"+text+"')]")
+            self.logger.info("el_toast："+str(el_toast))
+            ele=WebDriverWait(self.driver,5,0.1).until(EC.presence_of_element_located(el_toast))
+            self.logger.info("获取toast值为："+ele.text)
+            return ele.text
+        except TimeoutException:
+            self.logger.error("获取toast失败-time out")
 
 
 #断言文字(gettext,iscontains等等)？

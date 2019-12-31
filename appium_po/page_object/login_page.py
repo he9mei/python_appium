@@ -25,8 +25,24 @@ class Login(Base):
             self.logger.info("没有找到账号密码登录入口，可能默认已经进入了该页面。")
 
     def custom_login(self,account,pw):
+        #验证获取toast的登录
+        self.wait(2)
+        self.click(*self.el_login_bn)
+        self.get_toast("请输入用户名")
+        self.send_keys(account, *self.el_name_input)
+        self.click(*self.el_login_bn)
+        self.get_toast("请输入密码")
+        self.send_keys(pw, *self.el_pw_input)
+        self.click(*self.el_login_bn)
+        self.get_toast("请先勾选同意")
+        self.click(*self.el_private_switch)
+        self.click(*self.el_login_bn)
+        self.get_toast("登录成功")
+        '''
+        #不验证toast的登录
         self.send_keys(account, *self.el_name_input)
         self.send_keys(pw, *self.el_pw_input)
         # self.driver.press_keycode(4)  #华为手机点击登录时虚拟键盘没有自动关闭，乐蒙手机是好的
         self.click(*self.el_private_switch)  # 新版本需要勾选
         self.click(*self.el_login_bn)
+        '''

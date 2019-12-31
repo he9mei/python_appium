@@ -241,7 +241,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 30-Dec-2019 at 20:56:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
+    <p>Report generated on 31-Dec-2019 at 19:16:29 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -260,8 +260,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.8.0</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 37.36 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>1 tests ran in 30.26 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -272,15 +272,13 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">appium_po/test_case/test_02_home.py::TestHomePage::test_my_home</td>
-          <td class="col-duration">22.83</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">appium_po/test_case/test_01_login.py::TestLogin::test_1_custom_login[18500228275-111111]</td>
+          <td class="col-duration">0.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_02_home.py:11 ---测试我的个人主页---
-INFO     root:base_page.py:37 点击元素:(&#x27;id&#x27;, &#x27;com.dangdang.reader:id/tab_personal_iv&#x27;)
-INFO     root:base_page.py:37 点击元素:(&#x27;id&#x27;, &#x27;com.dangdang.reader:id/nickname_tv&#x27;)
-INFO     root:base_page.py:129 显式等待-元素出现：(&#x27;id&#x27;, &#x27;com.dangdang.reader:id/book_layout&#x27;)<br/></div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;appium_po.test_case.test_01_login.TestLogin object at 0x10d67f4f0&gt;<br/>driver = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;848e1942-6216-40c5-b405-881161c7026f&quot;)&gt;<br/>logger = &lt;RootLogger root (DEBUG)&gt;, account = &#x27;18500228275&#x27;, pw = &#x27;111111&#x27;<br/><br/>    @pytest.mark.parametrize(&quot;account,pw&quot;, [(&quot;18500228275&quot;, &quot;111111&quot;)])<br/>    def test_1_custom_login(self,driver,logger,account,pw):<br/>        logger.info(&quot;---测试登录流程---&quot;)<br/>        # print(f&quot;获得conftest.py的driver是：{driver}&quot;)<br/>        login=Login(driver,logger)<br/>        settings = Settings(driver,logger)<br/>&gt;       settings.logout()<br/><br/>test_01_login.py:15: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>../page_object/settings_page.py:17: in logout<br/>    self.settings_enter()<br/>../page_object/settings_page.py:13: in settings_enter<br/>    self.click(*Personal.el_tab_personal)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;appium_po.page_object.settings_page.Settings object at 0x10d721ca0&gt;<br/>locator = (&#x27;id&#x27;, &#x27;com.dangdang.reader:id/tab_personal_iv&#x27;)<br/><br/>    def click(self, *locator):<br/>&gt;       self.locator_element(*locator).click()<br/><span class="error">E       AttributeError: &#x27;NoneType&#x27; object has no attribute &#x27;click&#x27;</span><br/><br/>../base/base_page.py:36: AttributeError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_01_login.py:11 ---测试登录流程---
+ERROR    root:base_page.py:33 找不到元素：(&#x27;id&#x27;, &#x27;com.dangdang.reader:id/tab_personal_iv&#x27;)<br/></div></td></tr></tbody></table></body></html>

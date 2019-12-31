@@ -21,7 +21,7 @@ class Settings(Base):
                 # print("找到退出登录按钮!")
                 self.logger.info("找到退出登录按钮!")
                 self.click(*self.el_logout_bn)
-                self.wait(3)
+                self.wait(2)
         except NoSuchElementException:
             # print(e)
             # print("找不到退出按钮，可能目前未登录。")

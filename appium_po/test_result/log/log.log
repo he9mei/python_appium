@@ -78,3 +78,160 @@
 2019-12-30 20:56:06,456-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
 2019-12-30 20:56:07,970-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
 2019-12-30 20:56:18,909-base_page.py-INFO-[line:129]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-31 15:36:03,441-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 15:36:05,766-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 15:36:06,874-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 15:36:17,067-base_page.py-INFO-[line:131]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-31 15:36:23,822-base_page.py-INFO-[line:106]-截图成功：my_home_page
+2019-12-31 15:57:09,076-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 15:57:56,056-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 15:58:09,139-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 15:58:11,081-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 15:58:22,078-base_page.py-INFO-[line:140]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-31 15:58:28,753-base_page.py-INFO-[line:110]-截图成功：个人主页
+2019-12-31 16:02:15,667-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 16:02:19,801-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 16:02:20,790-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 16:02:40,659-base_page.py-INFO-[line:147]-显示等待-time out
+2019-12-31 16:02:44,867-base_page.py-INFO-[line:110]-截图成功：个人主页
+2019-12-31 16:09:31,938-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 16:09:38,953-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 16:09:39,954-base_page.py-INFO-[line:37]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 16:09:51,658-base_page.py-INFO-[line:147]-显示等待-time out
+2019-12-31 16:09:56,560-base_page.py-INFO-[line:110]-截图成功：个人主页
+2019-12-31 17:13:57,814-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 17:14:06,947-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:15:26,456-test_02_home.py-INFO-[line:11]----测试我的个人主页---
+2019-12-31 17:15:31,030-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:15:31,343-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 17:15:40,514-base_page.py-INFO-[line:149]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2019-12-31 17:19:03,060-test_02_home.py-INFO-[line:13]----测试我的个人主页---
+2019-12-31 17:21:37,284-test_02_home.py-INFO-[line:13]----测试我的个人主页---
+2019-12-31 17:29:32,047-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 17:29:35,214-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:29:37,123-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
+2019-12-31 17:29:37,392-base_page.py-INFO-[line:178]-向上滑动第1次
+2019-12-31 17:29:38,396-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:29:38,690-base_page.py-INFO-[line:178]-向上滑动第2次
+2019-12-31 17:29:39,691-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:29:50,118-settings_page.py-INFO-[line:28]-找不到退出按钮，可能目前未登录。
+2019-12-31 17:29:53,284-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_back')
+2019-12-31 17:29:56,462-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:29:57,495-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 17:30:08,835-login_page.py-INFO-[line:25]-没有找到账号密码登录入口，可能默认已经进入了该页面。
+2019-12-31 17:30:12,006-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:30:12,006-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请输入')]")
+2019-12-31 17:30:12,310-base_page.py-INFO-[line:121]-获取toast值为：请输入昵称/手机号/邮箱
+2019-12-31 17:30:22,874-base_page.py-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+2019-12-31 17:30:32,797-base_page.py-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/password_et') 输入：111111
+2019-12-31 17:30:33,491-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/private_switch_btn')
+2019-12-31 17:30:34,150-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:37:46,738-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 17:38:01,352-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:38:02,261-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
+2019-12-31 17:38:02,520-base_page.py-INFO-[line:178]-向上滑动第1次
+2019-12-31 17:38:03,524-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:38:03,787-base_page.py-INFO-[line:178]-向上滑动第2次
+2019-12-31 17:38:04,790-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:38:04,849-base_page.py-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/login')
+2019-12-31 17:38:04,849-settings_page.py-INFO-[line:22]-找到退出登录按钮!
+2019-12-31 17:38:05,053-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login')
+2019-12-31 17:38:08,053-base_page.py-INFO-[line:135]-等待：3s
+2019-12-31 17:38:08,296-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_back')
+2019-12-31 17:38:19,463-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:39:03,819-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 17:39:08,155-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:39:09,178-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
+2019-12-31 17:39:09,435-base_page.py-INFO-[line:178]-向上滑动第1次
+2019-12-31 17:39:10,438-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:39:10,763-base_page.py-INFO-[line:178]-向上滑动第2次
+2019-12-31 17:39:11,767-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:39:21,914-settings_page.py-INFO-[line:28]-找不到退出按钮，可能目前未登录。
+2019-12-31 17:39:25,096-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_back')
+2019-12-31 17:39:28,306-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:39:28,752-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 17:39:39,631-login_page.py-INFO-[line:25]-没有找到账号密码登录入口，可能默认已经进入了该页面。
+2019-12-31 17:39:42,789-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:39:42,789-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请输入用户名')]")
+2019-12-31 17:40:03,026-base_page.py-ERROR-[line:124]-获取toast失败
+2019-12-31 17:40:14,896-base_page.py-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+2019-12-31 17:40:18,569-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:40:18,570-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请输入密码')]")
+2019-12-31 17:40:38,243-base_page.py-ERROR-[line:124]-获取toast失败
+2019-12-31 17:40:48,645-base_page.py-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/password_et') 输入：111111
+2019-12-31 17:40:52,320-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:40:52,320-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请先勾选同意')]")
+2019-12-31 17:41:02,807-base_page.py-ERROR-[line:124]-获取toast失败
+2019-12-31 17:41:03,008-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/private_switch_btn')
+2019-12-31 17:41:03,678-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:41:03,679-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'登录成功')]")
+2019-12-31 17:41:14,418-base_page.py-ERROR-[line:124]-获取toast失败
+2019-12-31 17:45:24,498-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 17:45:38,316-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:45:39,251-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
+2019-12-31 17:45:39,618-base_page.py-INFO-[line:178]-向上滑动第1次
+2019-12-31 17:45:40,622-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:45:40,915-base_page.py-INFO-[line:178]-向上滑动第2次
+2019-12-31 17:45:41,918-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:45:42,363-base_page.py-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/login')
+2019-12-31 17:45:42,363-settings_page.py-INFO-[line:22]-找到退出登录按钮!
+2019-12-31 17:45:42,548-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login')
+2019-12-31 17:45:45,551-base_page.py-INFO-[line:135]-等待：3s
+2019-12-31 17:45:48,733-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_back')
+2019-12-31 17:45:51,918-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:45:52,366-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 17:46:11,869-login_page.py-INFO-[line:25]-没有找到账号密码登录入口，可能默认已经进入了该页面。
+2019-12-31 17:46:13,874-base_page.py-INFO-[line:135]-等待：2s
+2019-12-31 17:46:17,050-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 17:46:17,050-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请输入用户名')]")
+2019-12-31 17:46:27,546-base_page.py-ERROR-[line:124]-获取toast失败
+2019-12-31 17:52:25,982-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 17:52:38,462-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:52:39,452-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
+2019-12-31 17:52:39,696-base_page.py-INFO-[line:178]-向上滑动第1次
+2019-12-31 17:52:40,702-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:52:40,944-base_page.py-INFO-[line:178]-向上滑动第2次
+2019-12-31 17:52:41,948-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 17:52:52,679-settings_page.py-INFO-[line:28]-找不到退出按钮，可能目前未登录。
+2019-12-31 17:52:55,851-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_back')
+2019-12-31 17:52:59,034-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 17:52:59,489-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 17:53:14,287-login_page.py-INFO-[line:25]-没有找到账号密码登录入口，可能默认已经进入了该页面。
+2019-12-31 17:53:16,292-base_page.py-INFO-[line:135]-等待：2s
+2019-12-31 17:53:19,461-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 18:21:45,550-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 18:21:46,717-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 19:10:01,957-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 19:10:03,008-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 19:10:51,260-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 19:10:52,349-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 19:11:49,828-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 19:12:01,907-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 19:12:03,362-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_menu_btn')
+2019-12-31 19:12:03,608-base_page.py-INFO-[line:178]-向上滑动第1次
+2019-12-31 19:12:04,611-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 19:12:04,910-base_page.py-INFO-[line:178]-向上滑动第2次
+2019-12-31 19:12:05,910-base_page.py-INFO-[line:135]-等待：1s
+2019-12-31 19:12:16,233-settings_page.py-INFO-[line:28]-找不到退出按钮，可能目前未登录。
+2019-12-31 19:12:19,418-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/common_back')
+2019-12-31 19:12:23,103-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/tab_personal_iv')
+2019-12-31 19:12:23,544-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/nickname_tv')
+2019-12-31 19:12:34,538-login_page.py-INFO-[line:25]-没有找到账号密码登录入口，可能默认已经进入了该页面。
+2019-12-31 19:12:36,541-base_page.py-INFO-[line:135]-等待：2s
+2019-12-31 19:12:39,735-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 19:12:39,736-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请输入用户名')]")
+2019-12-31 19:12:50,225-base_page.py-ERROR-[line:124]-获取toast失败-time out
+2019-12-31 19:13:00,797-base_page.py-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+2019-12-31 19:13:04,472-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 19:13:04,472-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请输入密码')]")
+2019-12-31 19:13:15,572-base_page.py-ERROR-[line:124]-获取toast失败-time out
+2019-12-31 19:13:26,167-base_page.py-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/password_et') 输入：111111
+2019-12-31 19:13:29,833-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 19:13:29,833-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'请先勾选同意')]")
+2019-12-31 19:13:40,257-base_page.py-ERROR-[line:124]-获取toast失败-time out
+2019-12-31 19:13:40,456-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/private_switch_btn')
+2019-12-31 19:13:41,136-base_page.py-INFO-[line:38]-点击元素:('id', 'com.dangdang.reader:id/login_tv')
+2019-12-31 19:13:41,137-base_page.py-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'登录成功')]")
+2019-12-31 19:13:51,923-base_page.py-ERROR-[line:124]-获取toast失败-time out
+2019-12-31 19:16:21,464-test_01_login.py-INFO-[line:11]----测试登录流程---
+2019-12-31 19:16:22,425-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
