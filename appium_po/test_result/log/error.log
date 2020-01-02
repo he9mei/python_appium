@@ -17,3 +17,10 @@
 2019-12-31 19:13:40,257-base_page.py-ERROR-[line:124]-获取toast失败-time out
 2019-12-31 19:13:51,923-base_page.py-ERROR-[line:124]-获取toast失败-time out
 2019-12-31 19:16:22,425-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2020-01-02 18:33:32,299-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2020-01-02 18:35:28,957-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2020-01-02 19:29:53,553-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2020-01-02 19:31:36,268-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2020-01-02 19:33:48,293-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
+2020-01-02 19:34:49,966-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2020-01-02 19:46:58,223-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/nickname_tv')

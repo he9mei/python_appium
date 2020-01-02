@@ -117,7 +117,7 @@ class Base(object):
         try:
             el_toast=(By.XPATH,"//*[contains(@text,'"+text+"')]")
             self.logger.info("el_toast："+str(el_toast))
-            ele=WebDriverWait(self.driver,5,0.1).until(EC.presence_of_element_located(el_toast))
+            ele=WebDriverWait(self.driver,10,0.1).until(EC.presence_of_element_located(el_toast))
             self.logger.info("获取toast值为："+ele.text)
             return ele.text
         except TimeoutException:
