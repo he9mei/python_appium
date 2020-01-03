@@ -15,8 +15,16 @@
 
 import pytest
 
+login_data_tupe=[("18500228275","123456"),
+            ("18500000001","111111"),
+            ("18500000002","222222")]
+
+login_data_dict=[{"account":"18500228275","pw":"12345"},
+                 {"account":"18500000001","pw":"111111"},
+                 {"account":"18500000002","pw":"222222"}]
 
 class TestPara:
+    '''
     @pytest.mark.parametrize('mobile', ["18500228275", "1850000001", "18500000002"])
     # @pytest.mark.parametrize('password', ["123456", "111111", "222222"])  #这样写两个参数化，3个参数值会相互匹配3*3=9次，不会相互对应
     def test_register(self,mobile):
@@ -24,8 +32,22 @@ class TestPara:
         print(f"注册手机号{mobile}")  #格式化输出新学到的用法
 
     @pytest.mark.parametrize("mobile,password", [("18500228275","123456"), ("18500000001","111111"), ("18500000002","222222")])
-    def test_login(self,mobile,password):
+    def test_login1(self,mobile,password):
         print(f"登录的手机号是{mobile}密码是{password}")
+
+    #尝试把数据单独写出来
+    #方法1：把数据写成元组组成的列表
+    @pytest.mark.parametrize("data",login_data_tupe)
+    def test_login2(self,data):
+        print(f"登录的手机号是{data[0]}密码是{data[1]}")
+    '''
+    #方法2：把数据写成字典组成的列表
+    @pytest.mark.parametrize("data",login_data_dict)
+    def test_login3(self,data):
+        # print(f"登录的手机号是{data["account"]}密码是{data["pw"]}")  #这种情况下格式化输出无法识别key
+        print("登录的手机号是"+data["account"]+"密码是"+data["pw"])  #直接输入是可以的
+
+    #方法3：把数据写在excel中---暂未实现
 
 '''
 执行结果：
