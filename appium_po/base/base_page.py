@@ -35,7 +35,7 @@ class Base(object):
     def click(self, *locator):
         self.locator_element(*locator).click()
         # print(f"点击元素:{locator}")
-        self.logger.info("点击元素:" + str(locator))
+        self.logger.info("点击元素：" + str(locator))
         '''
         # 验证问题：找元素是已经做了异常处理，每一个方法封装时还需要做异常处理吗？以下是出现异常时的情况
         总结：不需要再做异常处理

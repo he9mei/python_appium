@@ -3,6 +3,8 @@ from selenium.common.exceptions import NoSuchElementException
 from appium_po.base.base_page import Base
 from appium_po.page_object.personal_page import Personal
 from appium_po.page_object.settings_page import Settings
+from appium_po.page_object.common_page import Common
+
 
 class Login(Base):
     #元素
@@ -25,8 +27,20 @@ class Login(Base):
             # print("没有找到账号密码登录入口，可能默认已经进入了该页面。")
             self.logger.info("没有找到账号密码登录入口，可能默认已经进入了该页面。")
 
-    def custom_login(self,account,pw):
-        #验证获取toast的登录
+    def custom_login(self,account,pw,toast):
+        '''
+        # 不验证toast的登录
+        self.send_keys(account, *self.el_name_input)
+        self.send_keys(pw, *self.el_pw_input)
+        # self.driver.press_keycode(4)  #华为手机点击登录时虚拟键盘没有自动关闭，乐蒙手机是好的
+        self.click(*self.el_private_switch)  # 新版本需要勾选
+        self.click(*self.el_login_bn)
+        '''
+
+        '''
+        # 验证获取toast的登录
+        # 暂无法做到参数化+不合法/不正确账号密码时toast的验证，因为获取toast需要传入部分文字获取全部文字，
+        # 但参数化时需要的部分文字是不同的。除非，把toast需要传入的部分文字也一起参数化。
         self.wait(2)
         self.click(*self.el_login_bn)
         self.get_toast("请输入用户名")
@@ -40,10 +54,38 @@ class Login(Base):
         self.click(*self.el_login_bn)
         self.get_toast("登录成功")
         '''
-        #不验证toast的登录
+
+        '''
+        # 不验证toast的登录，参数化
         self.send_keys(account, *self.el_name_input)
         self.send_keys(pw, *self.el_pw_input)
         # self.driver.press_keycode(4)  #华为手机点击登录时虚拟键盘没有自动关闭，乐蒙手机是好的
         self.click(*self.el_private_switch)  # 新版本需要勾选
         self.click(*self.el_login_bn)
-        '''
+        # self.get_screenshot("login_"+account+"_"+pw)  #截图不一定能截到toast
+        self.logger.info("正在登录："+account+","+pw)
+        try:
+            if self.is_displayed(*self.el_name_input):
+                self.click(*Common.el_back_bn_login)
+                self.logger.info("还停留在登录页，未登录成功，手动返回。")
+        except NoSuchElementException:
+            self.logger.info("已经离开登录页面，可能已经登录成功。")
+            '''
+
+        # 验证toast的登录，参数化
+        self.send_keys(account, *self.el_name_input)
+        self.send_keys(pw, *self.el_pw_input)
+        # self.driver.press_keycode(4)  #华为手机点击登录时虚拟键盘没有自动关闭，乐蒙手机是好的
+        self.click(*self.el_private_switch)  # 新版本需要勾选
+        self.click(*self.el_login_bn)
+        self.logger.info("正在登录：" + account + "," + pw)
+        self.get_toast(toast)
+        try:
+            if self.is_displayed(*self.el_name_input):
+                self.click(*Common.el_back_bn_login)
+                self.logger.info("还停留在登录页，未登录成功，手动返回。")
+        except NoSuchElementException:
+            self.logger.info("已经离开登录页面，可能已经登录成功。")
+
+
+
