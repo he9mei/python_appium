@@ -1,0 +1,6 @@
+case1:
+  - search_key: "selenium"
+case2:
+  - search_key: "appium"
+case3:
+  - search_key: "ddt"

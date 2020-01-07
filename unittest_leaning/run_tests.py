@@ -1,6 +1,6 @@
 import unittest
 
-top_level_dir="/Users/hehuaimei/PycharmProjects/python_appium/unitest_leaning"
+top_level_dir="/Users/hehuaimei/PycharmProjects/python_appium/unittest_leaning"
 start_dir="./test_case"
 pattern="test*.py"
 
