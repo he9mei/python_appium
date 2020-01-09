@@ -2,9 +2,9 @@
 import pytest
 from appium import webdriver
 from time import sleep
-
 import logging
 import logging.config
+import yagmail
 
 
 caps = {
@@ -33,6 +33,8 @@ def driver(request):
         sleep(5)
         driver.quit()
         print("关闭driver")
+        #执行完毕后自动发送邮件,能收到邮件，但是html-report邮件打开的格式变了；allue-report不能直接打开，发出去貌似也没用？
+        # send_mail("../test_result/report/html_report/report.html")
 
     request.addfinalizer(end)
     return driver
@@ -65,3 +67,14 @@ def logger():
     logger = logging.getLogger()
     print("---打印日志---")
     return logger
+
+
+#发送邮件，尝试在测试用例执行完毕之后，把测试报告当作附件发送
+def send_mail(attachment):
+    yag=yagmail.SMTP(user="hehuaimei123@163.com",
+                 password="8uhb*UHB",
+                 host="smtp.163.com")
+    subject="自动化测试报告"
+    contents="python自动化测试报告，自动发送。"
+    yag.send(["hehuaimei@dangdang.com","hehuaimei123@163.com"],subject,contents,attachment)
+    print("自动化测试报告已发送！")
