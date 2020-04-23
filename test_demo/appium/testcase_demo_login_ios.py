@@ -3,6 +3,7 @@ import time
 
 from appium import webdriver
 
+'''
 caps = {}
 caps["automationName"] = "XCUITest"
 caps["platformName"] = "iOS"
@@ -11,6 +12,28 @@ caps["deviceName"] = "iPhone 6 Plus"
 caps["bundleId"] = "com.dangdang.DDReaderEbook"
 caps["udid"] = "d3f1c7734e7d5124ed7b462fe14be64a0c22b65e"
 caps["noReset"] = "true"
+'''
+
+'''
+caps = {
+    "automationName": "XCUITest",
+    "platformName": "ios",
+    "platformVersion": "12.4.5",
+    "deviceName": "iPhone 6 Plus",
+    "udid": "d3f1c7734e7d5124ed7b462fe14be64a0c22b65e",
+    "bundleId": "com.dangdang.DDReaderEbook",
+    "noRest": "true"
+}
+'''
+caps = {
+    "automationName": "XCUITest",
+    "platformName": "ios",
+    "platformVersion": "12.1",
+    "deviceName": "iPhone 8",
+    "udid": "86976FD8-4F7A-4949-A9D4-833FA3BBF88D",
+    "bundleId": "com.dangdang.DDReaderEbook",
+    "noRest": "true"
+}
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 # 隐式等待

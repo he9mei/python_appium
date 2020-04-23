@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from appium_po.base.base_page import Base
+from appium_po.base.base import Base
 from appium_po.page_object.personal_page import Personal
 from appium_po.page_object.settings_page import Settings
 from appium_po.page_object.common_page import Common

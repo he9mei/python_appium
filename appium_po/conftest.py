@@ -13,10 +13,10 @@ caps = {
     "platformName": "Android",
     # "platformVersion": "8.0.0",  #华为手机
     # "deviceName": "HMKNW17727007061",
-    # "platformVersion": "7.1.1",  #OPPO手机
-    # "deviceName": "MJA68TGES4S4SKAY",
-    "platformVersion": "5.1",  #乐蒙手机
-    "deviceName": "MUGW8SOWWEY75NNDM",
+    "platformVersion": "7.1.1",  #OPPO手机
+    "deviceName": "MJA68TGES4S4SKAY",
+    # "platformVersion": "5.1",  #乐蒙手机
+    # "deviceName": "MUGW8SOWWEY75NNDM",
     "appPackage": "com.dangdang.reader",  #adb shell pm list package -3
     "appActivity": ".activity.GuideActivity",  #adb shell dumpsys activity |grep com.dangdang.reader |grep LAUNCHER
     "noReset": True
@@ -35,6 +35,10 @@ def driver(request):
         print("关闭driver")
         #执行完毕后自动发送邮件,能收到邮件，但是html-report邮件打开的格式变了；allue-report不能直接打开，发出去貌似也没用？
         # send_mail("../test_result/report/html_report/report.html")
+        # report.html能正常发送，但是会丢失格式
+        # send_mail("../test_result/report/allure_report")
+        #发送文件夹会报错 TypeError: '../test_result/report/allure_report' is not a valid filepath
+
 
     request.addfinalizer(end)
     return driver

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from appium_po.page_object.home_page import Home
-from appium_po.base.base_page import Base
+from appium_po.base.base import Base
 import pytest
 import random
 

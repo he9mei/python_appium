@@ -1,5 +1,5 @@
-from appium_po.base.log_conf_2 import Log
-from appium_po.test_case.log_2_2 import Log
+
+from log_learning.better.log_conf import Log
 import pytest
 import logging
 
@@ -19,7 +19,7 @@ class TestLog():
         logger.info("---哈哈哈，测试一下吧---")
 
     if __name__=="__main__":
-        pytest.main("-s -v test_log_2.py::TestLog::test_log_2")
+        pytest.main("-s -v test_log.py::TestLog::test_log_2")
 
 
 

@@ -25,7 +25,7 @@ class TestLogin(object):
     # @pytest.mark.parametrize("account,pw",[("",""),("18500228275",""),("12345678901","111111"),("18500228275","000000"),("18500228275","111111")])
     # @pytest.mark.parametrize("account,pw",[("18500228275","111111"),("hhm1@163.com","111111")])
     # @pytest.mark.parametrize("account,pw", [("18500228275", "111111")])
-    def test_1_custom_login(self,driver,logger,account,pw,toast):
+    def test_01_custom_login(self,driver,logger,account,pw,toast):
     # def test_1_custom_login(self,driver,logger,data):
         logger.info("---测试登录流程---")
         # print(f"获得conftest.py的driver是：{driver}")
@@ -40,7 +40,7 @@ class TestLogin(object):
 
 '''
 if __name__=="__main__":
-    # pytest.main("-s -v --html=./report/report.html test_01_login.py")
+    pytest.main("-s -v --html=./report/report.html test_01_login.py")
     pytest.main("-s -v --alluredir=%allure_result_folder% test_01_login.py")
     #allure报告生成是具体到文件夹即可，无需到文件名---这里执行没有生成？
 '''
@@ -63,4 +63,10 @@ if __name__=="__main__":
 
 如果要使用普通的报告：
 -->pytest -s -v --html=../test_result/report/html_report/report.html test_01_login.py
+'''
+
+'''
+//how to run case in terminal use this pytest.ini file
+//cd /Users/hehuaimei/PycharmProjects/python_appium/appium_po/test_case
+//pytest
 '''
