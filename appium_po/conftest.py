@@ -33,12 +33,14 @@ def driver(request):
         sleep(5)
         driver.quit()
         print("关闭driver")
-        #执行完毕后自动发送邮件,能收到邮件，但是html-report邮件打开的格式变了；allue-report不能直接打开，发出去貌似也没用？
+        # 执行完毕后自动发送邮件
         # send_mail("../test_result/report/html_report/report.html")
         # report.html能正常发送，但是会丢失格式
+        # 解决办法：--html=report.html --self-contained-html
         # send_mail("../test_result/report/allure_report")
         #发送文件夹会报错 TypeError: '../test_result/report/allure_report' is not a valid filepath
-
+        # allue-report不能直接打开，发出去貌似也没用？
+        #解决办法：===解决中===
 
     request.addfinalizer(end)
     return driver

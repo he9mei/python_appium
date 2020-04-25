@@ -1,4 +1,4 @@
-from appium_po.base.base import Base
+from appium_po.base.base_page import Base
 from selenium.webdriver.common.by import By
 
 class Common(Base):

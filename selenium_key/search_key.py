@@ -8,7 +8,7 @@ class KeyDemo:
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
 
-    def get_url(self,url):
+    def visit(self,url):
        self.driver.get(url)
 
     def locator(self,*locator):
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     el_baidu_bn=(By.ID,"su")
     key = KeyDemo()
     key.open_browser()
-    key.get_url("http://www.baidu.com")
+    key.visit("http://www.baidu.com")
     # key.send_keys("selenium", "kw")
     key.send_keys("selenium",*el_baidu_input)   #注意传参时也需要加*
     # key.click("su")

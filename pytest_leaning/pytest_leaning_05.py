@@ -20,5 +20,5 @@ python_files=test_06.py
 python_classes=Test*
 python_functions=test_*
 
-配置好之后，再执行用例时修改即可，执行时只需要在pycharm的Terminal输入pyetes即可。
+配置好之后，再执行用例时修改即可，执行时只需要在pycharm的Terminal输入pytest即可。
 '''

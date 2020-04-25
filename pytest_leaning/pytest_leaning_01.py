@@ -6,7 +6,8 @@
 简单灵活，容易上手
 支持参数化
 能够支持简单的单元测试和复杂的功能测试，还可以用来做selenium/appnium等自动化测试、接口自动化测试（pytest+requests）
-pytest具有很多第三方插件，并且可以自定义扩展，比较好用的如pytest-selenium（集成selenium）、pytest-html（完美html测试报告生成）、pytest-rerunfailures（失败case重复执行）、pytest-xdist（多CPU分发）等
+pytest具有很多第三方插件，并且可以自定义扩展，比较好用的如pytest-selenium（集成selenium）、pytest-html（完美html测试报告生成）、
+pytest-rerunfailures（失败case重复执行）、pytest-xdist（多CPU分发）等
 测试用例的skip和xfail处理
 可以很好的和jenkins集成
 report框架----allure 也支持了pytest

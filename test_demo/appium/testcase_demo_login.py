@@ -10,9 +10,9 @@ caps["platformName"] = "Android"
 # caps["platformVersion"] = "8.0.0"  #huawei
 # caps["deviceName"] = "HMKNW17727007061"
 caps["platformVersion"]="7.1.1"  #oppo
-caps["deviceName"]="MJA68TGES4S4SKAY"
-caps["appPackage"] = "com.dangdang.reader"
-caps["appActivity"] = ".activity.GuideActivity"
+caps["deviceName"]="MJA68TGES4S4SKAY"  # adb devices
+caps["appPackage"] = "com.dangdang.reader"  # adb shell pm list package|findstr dangdang
+caps["appActivity"] = ".activity.GuideActivity"  # adb shell dumpsys activity|findstr com.dangdang.reader|findstr LAUNCHER
 caps["noReset"] = "true"
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
