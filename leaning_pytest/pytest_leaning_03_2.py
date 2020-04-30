@@ -55,8 +55,17 @@ $ allure serve %allure_result_folder% //查看报告
 #可以打开一个html报告，如 http://192.168.142.91:49991/index.html
 问题：
 以上serve打开报告，之后再打开还需要这样操作比较麻烦，可以使用以下命令，生成index.html
--->allure generate ./report/allure_report/ -o ./report/allure_report/html
+
+-->allure generate ./report/allure_report/ -o ./report/allure_report/html --clean
+或者
+-->allure generate ./report/allure_report/ -c -o ./report/allure_report/html
+
 结果：Report successfully generated to ./report/allure_report/html
 操作后index.html即会放在./report/allure_report/html路径下
+备注:
+./report/allure_report/ 是之前生成的allure结果的文件的路径
+./report/allure_report/html 是根据之前生成的allure结果的文件再生成index.html的存放路径，可以自己绝对存放位置
+--clean 如果html这个路径已经存在，则先删除html文件。
+也可以写成-c
 ------------------------------------------------
 '''

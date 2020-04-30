@@ -1,0 +1,76 @@
+{
+  "uid" : "36d865ded46b98c2",
+  "name" : "test_04_test",
+  "fullName" : "test_case.test_search_fixture.TestSearch#test_04_test",
+  "historyId" : "e2044f09ebc485a9845be90a8ac8401c",
+  "time" : {
+    "start" : 1588146202178,
+    "stop" : 1588146202178,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: unconditional skip",
+  "statusTrace" : "('test_case/test_search_fixture.py', 29, 'Skipped: unconditional skip')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "before",
+    "time" : {
+      "start" : 1588146202166,
+      "stop" : 1588146202166,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "skip"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_search_fixture"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSearch"
+  }, {
+    "name" : "host",
+    "value" : "hehuaimeideMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "3234-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_search_fixture"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "skip" ]
+  },
+  "source" : "36d865ded46b98c2.json",
+  "parameterValues" : [ ]
+}

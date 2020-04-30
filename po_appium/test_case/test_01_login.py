@@ -51,7 +51,6 @@ if __name__=="__main__":
 之前在selenium_po路径
 -->cd ..
 -->cd po_appium
--->cd
 
 在terminal执行以上用例：
 如果要在terminal执行pytest -s -v --alluredir=allure_report test_01_login.py
@@ -66,7 +65,10 @@ if __name__=="__main__":
 '''
 
 '''
+最新修改：
 //how to run case in terminal use this pytest.ini file
-//cd /Users/hehuaimei/PycharmProjects/python_appium/po_appium/test_case
-//pytest
+-->cd /Users/hehuaimei/PycharmProjects/python_appium/po_appium
+-->pytest
+//之后所有路径，都是以项目路径（即testcase上一级）为基础
+//执行时，再指定用例testpaths=./test_case
 '''

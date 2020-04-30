@@ -13,6 +13,7 @@ class TestSearch:
         search.search_function(txt)
     '''
 
+    # @pytest.mark.skip
     @pytest.mark.parametrize("txt", ["selenium", "appium"])
     def test_01_search(self, txt, open_addfinalizer):
         search = Search(open_addfinalizer)
@@ -24,3 +25,8 @@ class TestSearch:
 
     def test_03_login(self,login):
         print(f"登录信息是:{login}")
+
+    @pytest.mark.skip
+    def test_04_test(self):
+        assert 0
+

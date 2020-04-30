@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","0","test_case","test_search_fixture","TestSearch","","","test_01_search[appium]",""
+"passed","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","0","test_case","test_search_fixture","TestSearch","","","test_02_register[18500000001]",""
+"skipped","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","0","test_case","test_search_fixture","TestSearch","","","test_01_search[selenium]",""
+"passed","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","0","test_case","test_search_fixture","TestSearch","","","test_03_login[login1]",""
+"passed","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","1","test_case","test_search_fixture","TestSearch","","","test_03_login[login0]",""
+"skipped","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","0","test_case","test_search_fixture","TestSearch","","","test_04_test",""
+"passed","Wed Apr 29 15:43:22 CST 2020","Wed Apr 29 15:43:22 CST 2020","0","test_case","test_search_fixture","TestSearch","","","test_02_register[18500000002]",""

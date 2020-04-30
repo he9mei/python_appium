@@ -4,5 +4,9 @@
   "test_case/test_search_fixture.py::TestSearch::test_02_register[18500000001]",
   "test_case/test_search_fixture.py::TestSearch::test_02_register[18500000002]",
   "test_case/test_search_fixture.py::TestSearch::test_03_login[login0]",
-  "test_case/test_search_fixture.py::TestSearch::test_03_login[login1]"
+  "test_case/test_search_fixture.py::TestSearch::test_03_login[login1]",
+  "test_case/test_search_fixture.py::TestSearch::test_04_fail",
+  "test_cmd.py::TestCmd::test_cmd",
+  "test_cmd.py::test_cmd",
+  "test_case/test_search_fixture.py::TestSearch::test_04_test"
 ]

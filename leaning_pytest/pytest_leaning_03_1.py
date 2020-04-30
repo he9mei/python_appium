@@ -22,7 +22,9 @@ pytest-html报告模式
 在pycharm的Terminal又按照以上命令重新安装了一次。---成功解决
 执行命令：
 -->pytest --html=./report/report.html  #自己指定路径
--->pytest --html=report.html --self-contained-html   #默认为当前项目路径
+-->pytest --html=report.html --self-contained-html   #默认为当前项目路径;
+备注：
+--self-contained-html的作用是为了解决发送html报告附件导致报告格式丢失的问题。
 
 
 附加：

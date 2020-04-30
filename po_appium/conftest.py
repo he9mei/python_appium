@@ -68,7 +68,7 @@ caps["noReset"] = "true"   #"true"或者True都可以，但是如果不写这个
 
 @pytest.fixture(scope="session")
 def logger():
-    CONF_LOG = "../log.conf"
+    CONF_LOG = "./log.conf"
     logging.config.fileConfig(CONF_LOG)
     logger = logging.getLogger()
     print("---打印日志---")

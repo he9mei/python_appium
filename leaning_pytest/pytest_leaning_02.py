@@ -39,7 +39,7 @@ mark标记官方文档：https://docs.pytest.org/en/latest/mark.html
 -m ：说明：执行特定的测试用例,”标记“
 -k： 说明：执行用例包含“关键字”的用例 ,"关键字"
 -q： 说明：简化控制台的输出
---lf：当一次用例执行完成后，如果其中存在失败的测试用例，那么我们可以使用此命令重新运行失败的测试用例
+--lf：当一次用例执行完成后，如果其中存在失败的测试用例，那么我们可以使用此命令重新运行失败的测试用例===很重要
 --ff：如果上次测试用例出现失败的用例，当使用--ff后，失败的测试用例会首先执行，剩余的用例也会再次执行一次
 进一步说明：
 -v
@@ -48,7 +48,7 @@ pytest -v leaning_pytest/test_01.py
 结果为：
 leaning_pytest/test_01.py::TestDemo::test_test1 PASSED                                                                             [ 50%]
 leaning_pytest/test_01.py::TestDemo::test_test2 PASSED
-其他的，如关键字k，失败重跑lf、ff后续再验证。
+其他的，如关键字k，失败重跑lf、ff后续再验证。==pytest --lf已经验证，可以重跑上次失败的用例集合。
 -m
 如果用例中包含多个分组，想要只运行其中一个组，则使用-m "组名"的方式。
 使用方式是，再函数前加上@pytest.mark.test (test是自己定义的名字，报警解决办法见前面的链接)

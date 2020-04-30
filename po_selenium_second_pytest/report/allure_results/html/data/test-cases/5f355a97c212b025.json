@@ -1,0 +1,89 @@
+{
+  "uid" : "5f355a97c212b025",
+  "name" : "test_02_register[18500000002]",
+  "fullName" : "test_case.test_search_fixture.TestSearch#test_02_register",
+  "historyId" : "89947a1ef3b7683cb2a7c0a4b7f5d91b",
+  "time" : {
+    "start" : 1588146202170,
+    "stop" : 1588146202170,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "register",
+    "time" : {
+      "start" : 1588146202169,
+      "stop" : 1588146202169,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "before",
+    "time" : {
+      "start" : 1588146202166,
+      "stop" : 1588146202166,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_search_fixture"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSearch"
+  }, {
+    "name" : "host",
+    "value" : "hehuaimeideMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "3234-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_search_fixture"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "register",
+    "value" : "'18500000002'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5f355a97c212b025.json",
+  "parameterValues" : [ "'18500000002'" ]
+}
