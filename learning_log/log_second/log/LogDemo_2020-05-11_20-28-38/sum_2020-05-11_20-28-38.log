@@ -1,0 +1,4 @@
+2020/05/11/20:28:38-[log.py-sum]-INFO-[line:48]-2+3的值是5
+2020/05/11/20:28:38-[log.py-sum]-INFO-[line:48]-4+5的值是9
+2020/05/11/20:28:38-[test_sum.py-test_sum]-INFO-[line:21]-求和结果是：17
+2020/05/11/20:28:38-[test_sum.py-test_sum_2]-INFO-[line:26]-求和结果是：17
