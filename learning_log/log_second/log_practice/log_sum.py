@@ -1,4 +1,4 @@
-from learning_log.log_second.log import LogDemo
+from learning_log.log_second.log_practice.log import LogDemo
 import sys
 
 

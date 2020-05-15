@@ -33,26 +33,10 @@ def driver(request):
         sleep(5)
         driver.quit()
         print("关闭driver")
-        # 执行完毕后自动发送邮件
-        # send_mail("../test_result/report/html_report/report.html")
-        # report.html能正常发送，但是会丢失格式
-        # 解决办法：--html=report.html --self-contained-html
-        # send_mail("../test_result/report/allure_report")
-        #发送文件夹会报错 TypeError: '../test_result/report/allure_report' is not a valid filepath
-        # allue-report不能直接打开，发出去貌似也没用？
-        #解决办法：===解决中===
 
     request.addfinalizer(end)
     return driver
 
-'''
-def test_1(driver):
-    print("测试用例")
-
-
-if __name__ == '__main__':
-    pytest.main("-s conftest.py")
-'''
 
 '''
 #也可以写成这种格式，先定义一个字典，再加数据
@@ -73,7 +57,13 @@ def logger():
     logger = logging.getLogger()
     print("---打印日志---")
     return logger
+'''
+目前用到使用fixture传入logger的位置包括：basic的init方法；每一个测试用例方法
 
+问题：log使用配置文件的形式，可以；但是无法根据功能做区分。
+解决办法：不使用fixture的方式调用；
+封装方法获得logger，然后每个py文件调用该方法，并传入py_name
+'''
 
 #发送邮件，尝试在测试用例执行完毕之后，把测试报告当作附件发送
 def send_mail(attachment):
@@ -84,3 +74,14 @@ def send_mail(attachment):
     contents="python自动化测试报告，自动发送。"
     yag.send(["hehuaimei@dangdang.com","hehuaimei123@163.com"],subject,contents,attachment)
     print("自动化测试报告已发送！")
+'''
+    # 执行完毕后自动发送邮件
+    # send_mail("../test_result/report/html_report/report.html")
+    # 问题1：report.html能正常发送，但是会丢失格式
+    # 解决办法：--html=report.html --self-contained-html
+    # send_mail("../test_result/report/allure_report")
+    #问题2：发送文件夹会报错 TypeError: '../test_result/report/allure_report' is not a valid filepath
+    # 用例执行完毕之前，报告还没有生成；这个时候发送，会找不到文件。
+    # 并且allue-report不能直接打开，不能以文件夹形式发送
+    #解决办法：使用jerkins执行用例，并且配置邮件自动发送allure和html两种报告
+'''
