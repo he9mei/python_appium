@@ -12,7 +12,7 @@ class Logger:
         class_name和func_name获取稍微麻烦点，换成直接使用py_name
         '''
         now=time.strftime("%Y-%m-%d_%H-%M-%S",time.localtime(time.time()))
-        path="./log"  #如果文件路径不存在，需要先创建
+        path="./test_result/log"  #如果文件路径不存在，需要先创建
         # path = "./log/" + class_name + "_" + now #一个class的log文件放入一个文件夹
         # filepath=os.path.dirname(os.getcwd())+"/log"  #python_appium/learning_log/log
         if not os.path.exists(path):

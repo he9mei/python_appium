@@ -1,5 +1,4 @@
 
-from appium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,12 +8,13 @@ import time
 import os
 import random
 
-from po_appium.conftest import caps
-# from po_appium.base.log_conf import Log
-import logging
+from po_appium.base.logger import Logger
+
+logger=Logger().logger()
+#问题，这里不好处理，可能导致py文件名都是basic
 
 class Base(object):
-    def __init__(self, driver,logger):
+    def __init__(self, driver):  #此处去掉了传入logger
         self.driver=driver
         # self.driver=webdriver.Remote("http://localhost:4723/wd/hub",caps)  #跑用例需要注释掉
         print(f"传入Base的driver是：{self.driver}")

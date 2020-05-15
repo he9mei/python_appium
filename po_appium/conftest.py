@@ -50,19 +50,25 @@ caps["appActivity"] = ".activity.GuideActivity"
 caps["noReset"] = "true"   #"true"或者True都可以，但是如果不写这个，每次启动都会清缓存重新启动
 '''
 
+'''
 @pytest.fixture(scope="session")
 def logger():
-    CONF_LOG = "./log.conf"
+    CONF_LOG = "./log_notUseNow.conf"
     logging.config.fileConfig(CONF_LOG)
     logger = logging.getLogger()
     print("---打印日志---")
     return logger
-'''
-目前用到使用fixture传入logger的位置包括：basic的init方法；每一个测试用例方法
 
-问题：log使用配置文件的形式，可以；但是无法根据功能做区分。
-解决办法：不使用fixture的方式调用；
-封装方法获得logger，然后每个py文件调用该方法，并传入py_name
+# 目前用到使用fixture传入logger的位置包括：
+# (1)basic的init方法,传入logger；
+# (2)继承basic的page类，实例化时，传入logger;
+# (3)每一个测试用例方法,传入logger
+# 
+# 问题：log使用配置文件的形式，可以；但是无法根据功能做区分。
+# 解决办法：
+# 不使用fixture的方式调用；
+# (conftest.py文件中logger注释；log.conf文件暂时改名，否则还是可以识别，不使用的话会报错)
+# 封装方法获得logger，然后每个py文件调用该方法，并传入py_name
 '''
 
 #发送邮件，尝试在测试用例执行完毕之后，把测试报告当作附件发送

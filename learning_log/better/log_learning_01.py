@@ -89,7 +89,7 @@ logging.basicConfig(level=logging.DEBUG,filename="runlog.log",format="%(asctime)
 import logging
 import logging.config
 #这个是配置文件的路径
-CONF_LOG = "../Config/log.conf"
+CONF_LOG = "../Config/log_notUseNow.conf"
 logging.config.fileConfig(CONF_LOG)
 logger = logging.getLogger()
 #下面就是使用日志打印日志信息

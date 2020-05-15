@@ -1,4 +1,0 @@
-2020-01-03 18:52:08,034-base_page.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_iv')
-2020-04-23 19:57:03,374-base.py-ERROR-[line:33]-找不到元素：('id', 'com.dangdang.reader:id/name_edit')
-2020-04-30 18:26:50,774-base_page.py-ERROR-[line:124]-获取toast失败-time out
-2020-04-30 18:33:03,849-base_page.py-ERROR-[line:124]-获取toast失败-time out

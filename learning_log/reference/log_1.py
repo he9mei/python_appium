@@ -2,7 +2,7 @@ import logging
 import logging.config
 
 def test_log():
-    CONF_LOG = "../log.conf"
+    CONF_LOG = "../log_notUseNow.conf"
     logging.config.fileConfig(CONF_LOG)
     logger = logging.getLogger()
     logger.info("--测试日志---")
