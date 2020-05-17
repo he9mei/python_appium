@@ -15,8 +15,8 @@ class Login(Base):
     el_private_switch=(By.ID,"com.dangdang.reader:id/private_switch_btn")
 
     def custom_login_enter(self):
-        self.swipe_down()   #防止页面不再最上方
         self.click(*Personal.el_tab_personal)  #由于传入的是2个参数，此处定义的是不定长，别忘了*
+        self.swipe_down()  # 防止页面不再最上方
         self.click(*Personal.el_nickname)
         try:
             if self.is_displayed(*self.el_custom_login_enter):

@@ -9,7 +9,7 @@ import yagmail
 
 caps = {
     # "automationName": "Appium",
-    "automationName": "UIAutomator2",
+    "automationName": "UIAutomator2",  #appium新版本才能用(目前用的1.15.1)，老版本用不了
     "platformName": "Android",
     # "platformVersion": "8.0.0",  #华为手机
     # "deviceName": "HMKNW17727007061",

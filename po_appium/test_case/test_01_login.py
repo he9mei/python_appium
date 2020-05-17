@@ -5,7 +5,7 @@ import pytest
 from po_appium.base.logger import Logger
 from pathlib import Path
 
-logger=Logger().logger(Path(__file__).name)
+logger = Logger().logger(Path(__file__).name)
 
 '''
 #pytest.mark.parametrize实现参数化，如果数据较多，也可以把数据单独写成一个元素列表或者字典列表，元组列表更简单一些。
@@ -17,6 +17,7 @@ login_data=[("","","请输入用户名"),
             ("18500000099","111111","该用户名不存在"),
             ("18500228275","111111","登录成功")]
 '''
+
 
 class TestLogin(object):
     @pytest.mark.parametrize("account,pw,toast", [("18500228275", "111111", "登录成功")])
@@ -30,12 +31,12 @@ class TestLogin(object):
     # @pytest.mark.parametrize("account,pw",[("",""),("18500228275",""),("12345678901","111111"),("18500228275","000000"),("18500228275","111111")])
     # @pytest.mark.parametrize("account,pw",[("18500228275","111111"),("hhm1@163.com","111111")])
     # @pytest.mark.parametrize("account,pw", [("18500228275", "111111")])
-    def test_01_custom_login(self,driver,account,pw,toast):  #此处去掉传入logger
+    def test_01_custom_login(self, driver, account, pw, toast):  #修改：此处去掉传入logger,直接在py文件内赋值logger
     # def test_1_custom_login(self,driver,logger,data):
         logger.info("---测试登录流程---")
         # print(f"获得conftest.py的driver是：{driver}")
-        login=Login(driver)  #此处去掉传入logger
-        settings = Settings(driver)   #此处去掉传入logger
+        login=Login(driver,logger)  #此处依旧传入logger
+        settings = Settings(driver,logger)   #此处依旧传入logger
         settings.logout()
         login.custom_login_enter()
         # login.custom_login("18500228275","111111")

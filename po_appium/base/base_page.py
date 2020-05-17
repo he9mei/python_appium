@@ -8,19 +8,17 @@ import time
 import os
 import random
 
-from po_appium.base.logger import Logger
-
-logger=Logger().logger()
-#问题，这里不好处理，可能导致py文件名都是basic
 
 class Base(object):
-    def __init__(self, driver):  #此处去掉了传入logger
+    def __init__(self, driver,logger):  #此处依旧传入logger
         self.driver=driver
         # self.driver=webdriver.Remote("http://localhost:4723/wd/hub",caps)  #跑用例需要注释掉
         print(f"传入Base的driver是：{self.driver}")
         # self.logger=Log(self.__class__.__name__) #通过base下的log_conf.py文件内的配置，设置log---放在不同文件
         self.logger=logger  #通过log.conf文件内的配置+conftest.py文件接收配置，设置log---放在同一个文件
         # self.logger=logging.getLogger()   #跑用例需要注释掉
+        # 备注：driver和logger是从test_case传过来的。driver是从conftest.py传过来的。
+        # logger如果从contest.py传过来也可以，但是无法区分文件；目前是从每个py文件赋值一次且传入py文件名，再传过来。
 
 #定位元素、点击、输入、判断是否存在
     def locator_element(self, *locator):
