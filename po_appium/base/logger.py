@@ -27,9 +27,11 @@ class Logger:
             #创建处理器
             sh=logging.StreamHandler()
             # sh=logging.StreamHandler(sys.stdout, )
-            fh=logging.FileHandler(filename="{}/{}_{}.log".format(path,py_name,now),mode="a")  #py_name换掉func_name
+            py_name_str = py_name.split(".py")[0]  #拿到py_name再以".py"分隔，取前面的字符串（不切割也能正常生成log）
+            fh=logging.FileHandler(filename="{}/{}_{}.log".format(path, py_name_str, now), mode="a", encoding="utf-8")  #py_name换掉func_name
+            #注意：此处需要加上encoding="utf-8"，否则Windows上生成的log文件显示问号，打不开。
             #创建个格式器
-            formatter=logging.Formatter(fmt="%(asctime)s-[%(filename)s-%(funcName)s]-%(levelname)s-[line:%(lineno)d]-%(message)s",
+            formatter = logging.Formatter(fmt="%(asctime)s-[%(filename)s-%(funcName)s]-%(levelname)s-[line:%(lineno)d]-%(message)s",
                                        datefmt="%Y/%m/%d/%X")
 
             sh.setFormatter(formatter)
