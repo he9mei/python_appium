@@ -2,10 +2,12 @@ from po_appium.page_object.login_page import Login
 from po_appium.page_object.settings_page import Settings
 import pytest
 
-from po_appium.base.logger import Logger
+from po_appium.base.log import Log
 from pathlib import Path
 
-logger = Logger().logger(Path(__file__).name)
+# logger = Logger().logger(Path(__file__).name) #创建logger的方法从logger()改写到init方法
+log = Log(Path(__file__).name)
+logger = log.get_logger()
 
 '''
 #pytest.mark.parametrize实现参数化，如果数据较多，也可以把数据单独写成一个元素列表或者字典列表，元组列表更简单一些。
@@ -19,6 +21,7 @@ login_data=[("","","请输入用户名"),
 '''
 
 
+# 备注：如果必须输入验证码，则登录无法自动化
 class TestLogin(object):
     @pytest.mark.parametrize("account,pw,toast", [("18500228275", "111111", "登录成功")])
     # @pytest.mark.parametrize("data",login_data)
@@ -31,7 +34,7 @@ class TestLogin(object):
     # @pytest.mark.parametrize("account,pw",[("",""),("18500228275",""),("12345678901","111111"),("18500228275","000000"),("18500228275","111111")])
     # @pytest.mark.parametrize("account,pw",[("18500228275","111111"),("hhm1@163.com","111111")])
     # @pytest.mark.parametrize("account,pw", [("18500228275", "111111")])
-    def test_01_custom_login(self, driver, account, pw, toast):  #修改：此处去掉传入logger,直接在py文件内赋值logger
+    def test_login_01_custom_login(self, driver, account, pw, toast):  #修改：此处去掉传入logger,直接在py文件内赋值logger
     # def test_1_custom_login(self,driver,logger,data):
         logger.info("---测试登录流程---")
         # print(f"获得conftest.py的driver是：{driver}")
@@ -43,6 +46,12 @@ class TestLogin(object):
         # login.custom_login(account,pw)
         login.custom_login(account,pw,toast)  #把toast也参数化
         # login.custom_login(data[0],data[1],data[2])  #把数据单独写到元组列表，再获取数据
+
+        # py文件代码结束后，移除logger的处理器
+        # log.remove_handler()
+        # 不同py文件使用相同logger，再利用移除新建的方式不好使
+        # 修改：改成了不同py文件使用不同的logger,但是会产品多个logger，不移除不知道会不会有影响？
+
 
 '''
 if __name__=="__main__":

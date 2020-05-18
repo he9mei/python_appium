@@ -91,3 +91,6 @@ def send_mail(attachment):
     # 并且allue-report不能直接打开，不能以文件夹形式发送
     #解决办法：使用jerkins执行用例，并且配置邮件自动发送allure和html两种报告
 '''
+
+# 每个py文件都重新赋值了logger，但是第二个py文件的log还是放在第一个py文件的py_name文件中。说明还是用的上一个py文件的logger
+# 尝试解决：每个py文件前面生成logger；最后再移除ogger。（移除fh处理器即可）

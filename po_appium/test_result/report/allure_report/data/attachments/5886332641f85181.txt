@@ -1,0 +1,26 @@
+[32mINFO    [0m logger:test_02_home.py:16 ---测试我的个人主页---
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+[32mINFO    [0m logger:base_page.py:154 显示等待-time out
+[32mINFO    [0m logger:base_page.py:109 截图成功：个人主页
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第1次
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第2次
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第3次
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第4次
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第5次
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第6次
+[32mINFO    [0m logger:base_page.py:237 滑动到元素-元素暂未出现
+[32mINFO    [0m logger:base_page.py:240 滑动到元素-向上缓慢滑动第7次
+[32mINFO    [0m logger:base_page.py:233 滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+[32mINFO    [0m logger:base_page.py:133 等待：1s
+[32mINFO    [0m logger:base_page.py:133 等待：1s
+[32mINFO    [0m logger:base_page.py:84 按序号点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+[32mINFO    [0m logger:base_page.py:133 等待：1s
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/bar_info_title_back')
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/d84de8f8-9e24-464a-afca-20546e488b13

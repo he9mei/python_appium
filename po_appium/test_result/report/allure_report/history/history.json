@@ -1,0 +1,41 @@
+{
+  "d134241bfc73ddd4caacb8a9542d34a8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "12a97f0f7e1914a5",
+      "status" : "broken",
+      "statusDetails" : "ValueError: empty range for randrange() (0, 0, 0)",
+      "time" : {
+        "start" : 1589771452514,
+        "stop" : 1589771560899,
+        "duration" : 108385
+      }
+    } ]
+  },
+  "a884dd59d8675823c9ed9596de1e6a3f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "986ce23f552748db",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589771408288,
+        "stop" : 1589771452509,
+        "duration" : 44221
+      }
+    } ]
+  }
+}

@@ -79,13 +79,29 @@ class Login(Base):
         self.click(*self.el_private_switch)  # 新版本需要勾选
         self.click(*self.el_login_bn)
         self.logger.info("正在登录：" + account + "," + pw)
-        self.get_toast(toast)
+
         try:
+            text = self.get_toast(toast)
+            assert text   #直接用是否获取到正确的toast来断言
+
+            if str(text).__contains__("登录成功"):
+                self.logger.info("已登录成功!")
+            else:
+                self.logger.info("未登录成功!")
+        except AssertionError:
+            self.logger.error("没有获取到登录toast!")
+        finally:
             if self.is_displayed(*self.el_name_input):
                 self.click(*Common.el_back_bn_login)
-                self.logger.info("还停留在登录页，未登录成功，手动返回。")
-        except NoSuchElementException:
-            self.logger.info("已经离开登录页面，可能已经登录成功。")
+
+
+        # 以下用元素是否存在的方式判断，改成以上用toast来判断
+        # try:
+        #     if self.is_displayed(*self.el_name_input):
+        #         self.click(*Common.el_back_bn_login)
+        #         self.logger.info("还停留在登录页，未登录成功，手动返回。")
+        # except NoSuchElementException:
+        #     self.logger.info("已经离开登录页面，可能已经登录成功。")
 
 
 

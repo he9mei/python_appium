@@ -1,0 +1,28 @@
+[32mINFO    [0m logger:test_01_login.py:36 ---测试登录流程---
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+[32mINFO    [0m logger:base_page.py:176 向上滑动第1次
+[32mINFO    [0m logger:base_page.py:133 等待：1s
+[32mINFO    [0m logger:base_page.py:176 向上滑动第2次
+[32mINFO    [0m logger:base_page.py:133 等待：1s
+[32mINFO    [0m logger:base_page.py:64 元素出现：('id', 'com.dangdang.reader:id/login')
+[32mINFO    [0m logger:settings_page.py:22 找到退出登录按钮!
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/login')
+[32mINFO    [0m logger:base_page.py:117 el_toast：('xpath', "//*[contains(@text,'退出登录成功')]")
+[32mINFO    [0m logger:base_page.py:119 获取toast值为：退出登录成功
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/common_back')
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+[32mINFO    [0m logger:base_page.py:189 向下滑动第1次
+[32mINFO    [0m logger:base_page.py:133 等待：1s
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+[32mINFO    [0m logger:base_page.py:64 元素出现：('id', 'com.dangdang.reader:id/custom_login_tv')
+[32mINFO    [0m logger:login_page.py:24 找到账号密码登录入口！
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/custom_login_tv')
+[32mINFO    [0m logger:base_page.py:56 元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+[32mINFO    [0m logger:base_page.py:56 元素：('id', 'com.dangdang.reader:id/password_et') 输入：111111
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/private_switch_btn')
+[32mINFO    [0m logger:base_page.py:36 点击元素：('id', 'com.dangdang.reader:id/login_tv')
+[32mINFO    [0m logger:login_page.py:81 正在登录：18500228275,111111
+[32mINFO    [0m logger:base_page.py:117 el_toast：('xpath', "//*[contains(@text,'登录成功')]")
+[32mINFO    [0m logger:base_page.py:119 获取toast值为：登录成功
+[32mINFO    [0m logger:login_page.py:88 已经离开登录页面，可能已经登录成功。

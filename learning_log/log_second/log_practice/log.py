@@ -60,9 +60,9 @@ logdemo.sum(4,5)
             os.makedirs(path)
             
 2.多次调用时，会重现重复数据---解决办法：需要判断日志器是否存在handler，不存在才添加
-2020/05/11/19:38:25-[logger.py-sum]-INFO-[line:43]-2+3的值是5
-2020/05/11/19:38:25-[logger.py-sum]-INFO-[line:43]-4+5的值是9
-2020/05/11/19:38:25-[logger.py-sum]-INFO-[line:43]-4+5的值是9
+2020/05/11/19:38:25-[log.py-sum]-INFO-[line:43]-2+3的值是5
+2020/05/11/19:38:25-[log.py-sum]-INFO-[line:43]-4+5的值是9
+2020/05/11/19:38:25-[log.py-sum]-INFO-[line:43]-4+5的值是9
 '''
 
 

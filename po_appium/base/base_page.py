@@ -29,6 +29,7 @@ class Base(object):
         except NoSuchElementException:
             # print(f"找不到元素：{locator}")
             self.logger.error("找不到元素："+str(locator))
+            raise
 
     def click(self, *locator):
         self.locator_element(*locator).click()
@@ -77,6 +78,7 @@ class Base(object):
             return el_list
         except NoSuchElementException:
             self.logger.error("找不到元素："+str(locator))
+            raise
 
     def click_index(self,index,*locator):
         el_list=self.locator_elements(*locator)
@@ -119,7 +121,8 @@ class Base(object):
             self.logger.info("获取toast值为："+ele.text)
             return ele.text
         except TimeoutException:
-            self.logger.error("获取toast失败-time out")
+            self.logger.error(f"获取toast'{text}'失败-time out")
+            raise
 
 
 #断言文字(gettext,iscontains等等)？
@@ -148,10 +151,12 @@ class Base(object):
             return el
         except NoSuchElementException:
             # print(f"显示等待-元素未出现：{locator}")
-            self.logger.info("显示等待-元素未出现："+str(locator))
+            self.logger.error("显示等待-元素未出现："+str(locator))
+            raise
         except TimeoutException:
             # print("显示等待-time out")
-            self.logger.info("显示等待-time out")
+            self.logger.error("显示等待-time out")
+            raise
 
 #切换手机系统输入法，实际相当于是在终端输入相应命令，利用os.system
     @staticmethod

@@ -1,0 +1,51 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_case",
+    "children" : [ {
+      "name" : "test_01_login",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "test_login_01_custom_login[18500228275-111111-登录成功]",
+          "uid" : "986ce23f552748db",
+          "parentUid" : "d5455b212e32301ec08b5c5018c9f086",
+          "status" : "passed",
+          "time" : {
+            "start" : 1589771408288,
+            "stop" : 1589771452509,
+            "duration" : 44221
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'18500228275'", "'111111'", "'登录成功'" ]
+        } ],
+        "uid" : "d5455b212e32301ec08b5c5018c9f086"
+      } ],
+      "uid" : "f5dde84d9b20f18321be1b4f986fb0ab"
+    }, {
+      "name" : "test_02_home",
+      "children" : [ {
+        "name" : "TestHomePage",
+        "children" : [ {
+          "name" : "test_home_01_my_bar",
+          "uid" : "12a97f0f7e1914a5",
+          "parentUid" : "e7ac41b0bccf2dfc8e2e3c9055f99554",
+          "status" : "broken",
+          "time" : {
+            "start" : 1589771452514,
+            "stop" : 1589771560899,
+            "duration" : 108385
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "e7ac41b0bccf2dfc8e2e3c9055f99554"
+      } ],
+      "uid" : "81bdc3c7c24a59d9d3cb25898069b859"
+    } ],
+    "uid" : "86abcc46617c603d802c3e378b13740e"
+  } ]
+}
