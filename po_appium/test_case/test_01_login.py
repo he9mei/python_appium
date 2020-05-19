@@ -21,8 +21,10 @@ login_data=[("","","请输入用户名"),
 '''
 
 
-# 备注：如果必须输入验证码，则登录无法自动化
+# 备注：如果必须输入验证码，则登录无法自动化,暂时跳过
+# @pytest.mark.skip
 class TestLogin(object):
+
     @pytest.mark.parametrize("account,pw,toast", [("18500228275", "111111", "登录成功")])
     # @pytest.mark.parametrize("data",login_data)
     # @pytest.mark.parametrize("account,pw,toast",[("","","请输入用户名"),
@@ -41,7 +43,7 @@ class TestLogin(object):
         login=Login(driver,logger)  #此处依旧传入logger
         settings = Settings(driver,logger)   #此处依旧传入logger
         settings.logout()
-        login.custom_login_enter()
+        # login.custom_login_enter()  //这个函数可以在这里调用，也可以直接封装在custom_login方法中。
         # login.custom_login("18500228275","111111")
         # login.custom_login(account,pw)
         login.custom_login(account,pw,toast)  #把toast也参数化

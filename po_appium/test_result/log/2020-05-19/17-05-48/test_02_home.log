@@ -1,0 +1,12 @@
+2020/05/19/17:06:05-[test_02_home.py-test_home_01_my_bar]-INFO-[line:18]----测试我的个人主页---
+2020/05/19/17:06:08-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/17:06:09-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/05/19/17:06:10-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第1次
+2020/05/19/17:06:11-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:06:12-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第2次
+2020/05/19/17:06:13-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:06:14-[base_page.py-is_displayed]-INFO-[line:65]-元素出现：('id', 'com.dangdang.reader:id/login')
+2020/05/19/17:06:14-[settings_page.py-is_login]-INFO-[line:36]-用户已登录!
+2020/05/19/17:06:14-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_back')
+2020/05/19/17:06:15-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/17:06:26-[base_page.py-locator_element]-ERROR-[line:31]-找不到元素：('id', 'com.dangdang.reader:id/nickname_tv')

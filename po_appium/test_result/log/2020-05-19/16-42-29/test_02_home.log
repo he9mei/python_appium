@@ -1,0 +1,9 @@
+2020/05/19/16:42:50-[test_02_home.py-test_home_01_my_bar]-INFO-[line:18]----测试我的个人主页---
+2020/05/19/16:42:57-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/16:42:57-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/05/19/16:42:59-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第1次
+2020/05/19/16:43:00-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/16:43:01-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第2次
+2020/05/19/16:43:02-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/16:43:12-[settings_page.py-is_login]-ERROR-[line:37]-找不到退出按钮，可能用户未登录。
+2020/05/19/16:43:12-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_back')

@@ -1,0 +1,4 @@
+2020/05/19/15:39:55-[test_02_home.py-test_home_01_my_bar]-INFO-[line:17]----测试我的个人主页---
+2020/05/19/15:40:02-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/15:40:02-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/05/19/15:40:13-[base_page.py-explicitly_wait]-ERROR-[line:156]-显示等待-time out

@@ -28,6 +28,7 @@ class Login(Base):
             self.logger.info("没有找到账号密码登录入口，可能默认已经进入了该页面。")
 
     def custom_login(self,account,pw,toast):
+        self.custom_login_enter()  #这个函数调用可以写在这里，也可以写在test case中
         '''
         # 不验证toast的登录
         self.send_keys(account, *self.el_name_input)
@@ -92,6 +93,7 @@ class Login(Base):
             self.logger.error("没有获取到登录toast!")
         finally:
             if self.is_displayed(*self.el_name_input):
+                self.logger.info("还停留在登录页面，手动返回！")
                 self.click(*Common.el_back_bn_login)
 
 

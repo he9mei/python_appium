@@ -17,10 +17,12 @@ class Log:
         # now=time.strftime("%Y-%m-%d_%H-%M-%S",time.localtime(time.time()))  # 可以用这个，也可以分开日期和时间
         dt=time.strftime("%Y-%m-%d",time.localtime(time.time()))  #用时间做一层文件夹，下一层只显示时间
         tm = time.strftime("%H-%M-%S", time.localtime(time.time()))
-        path=f"./test_result/log/{dt}"  #如果文件路径不存在，需要先创建
+        path=f"./test_result/log/{dt}/{tm}"
+        # 可以不用具体到日期和时间，这里是为了区分每次跑用例的log分开,并且发现同批次跑的用例log文件夹的时间是都是一样的。
+        # 因此，我这里用时间区分文件夹，然后在具体的log文件名去掉了时间显示。
         # path = "./log/" + class_name + "_" + now #一个class的log文件放入一个文件夹
         # filepath=os.path.dirname(os.getcwd())+"/log"  #python_appium/learning_log/log
-        if not os.path.exists(path):
+        if not os.path.exists(path):  #如果文件路径不存在，需要先创建
             os.makedirs(path)
 
         #创建日志器
@@ -31,22 +33,26 @@ class Log:
         self.logger=logging.getLogger(py_name_str)
         self.logger.setLevel(logging.DEBUG)
 
-        if self.logger.handlers:
-            print("已经存在handles")
-
         #判断是否已经存在处理器
         if not self.logger.handlers:
             #创建处理器
             print("不存在handles")
             self.sh=logging.StreamHandler()
             # sh=logging.StreamHandler(sys.stdout, )
-            self.fh=logging.FileHandler(filename="{}/{}_{}.log".format(path, py_name_str, tm), mode="a", encoding="utf-8")  #py_name换掉func_name
+            # self.fh=logging.FileHandler(filename="{}/{}_{}.log".format(path, py_name_str, tm), mode="a", encoding="utf-8")  #py_name换掉func_name
+            self.fh = logging.FileHandler(filename="{}/{}.log".format(path, py_name_str),
+                                          mode="a",
+                                          encoding="utf-8")
             #注意：此处需要加上encoding="utf-8"，否则Windows上生成的log文件显示问号，打不开。
+
             #创建个格式器
-            self.fh_error=logging.FileHandler(filename="{}/{}_error_{}.log".format(path, py_name_str, tm), mode="a", encoding="utf-8")
+            # self.fh_error=logging.FileHandler(filename="{}/{}_error_{}.log".format(path, py_name_str, now), mode="a", encoding="utf-8")
+            self.fh_error = logging.FileHandler(filename="{}/{}_error.log".format(path, py_name_str),
+                                                mode="a",
+                                                encoding="utf-8")
 
             formatter = logging.Formatter(fmt="%(asctime)s-[%(filename)s-%(funcName)s]-%(levelname)s-[line:%(lineno)d]-%(message)s",
-                                       datefmt="%Y/%m/%d/%X")
+                                          datefmt="%Y/%m/%d/%X")
 
             self.sh.setFormatter(formatter)
             self.fh.setFormatter(formatter)
@@ -77,6 +83,12 @@ class Log:
 （fixture的方式，目前不知道怎么传入参数）
 还有一种py文件内的BasicConfig配置方式，用的比较少。
 '''
+
+# 目前的log还存在一个问题，如果文件没有写入任何内容，文件也会存在。
+# 比如整个class都是跳过，但是该py文件的log文件还是会生成，是空的；
+# 再比如error文件也可能是空的。
+# 如果没有任何内容可以，删除这些文件吗？否则需要手动点击查看。
+# 或者先根据测试报告查看失败的用例，再去查看error.log
 
 
 

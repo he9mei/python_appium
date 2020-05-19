@@ -13,6 +13,7 @@ class Home(Base):
 
     def my_home_enter(self):
         self.click(*Personal.el_tab_personal)
+        self.swipe_down(1)
         self.click(*Personal.el_nickname)
         self.explicitly_wait(10,self.el_my_reading_list)  #注意：此处元素参数不需要*，以元组形式传入,原方法可以直接接收元组
         # self.get_screenshot("my_home_page")  #验证截图

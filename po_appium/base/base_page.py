@@ -97,16 +97,14 @@ class Base(object):
 # 1、给定截图的名称为中文，则需添加u，如：get_screenShot(u"个人主页")，否则截图保存的文件名称乱；---貌似不写也没问题
 # 2、若给定的截图名称为英文，则不需添加U
     def get_screenshot(self,name):
-        day=time.strftime("%Y-%m-%d",time.localtime(time.time()))
+        dt=time.strftime("%Y-%m-%d",time.localtime(time.time()))
         # tm=time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))  #图片文件名加上日期和时间
-        tm=time.strftime("%H_%M_%S",time.localtime(time.time()))  #由于文件夹是以日期命名的，文件名省去日期
-        fq="../test_result/screentshot/"+day
+        tm=time.strftime("%H-%M-%S",time.localtime(time.time()))  #由于文件夹是以日期命名的，文件名省去日期
+        path=f"./test_result/screentshot/{dt}"
         try:
-            if os.path.exists(fq):
-                filename=fq+"/"+tm+"_"+name+".png"
-            else:
-                os.makedirs(fq)
-                filename=fq+"/"+tm+"_"+name+".png"
+            if not os.path.exists(path):
+                os.makedirs(path)
+            filename=path+"/"+name+"_"+tm+".png"
             self.driver.get_screenshot_as_file(filename)
             self.logger.info("截图成功："+name)
         except Exception as e:
