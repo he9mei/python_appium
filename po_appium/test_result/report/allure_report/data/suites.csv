@@ -1,3 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Mon May 18 11:10:52 CST 2020","Mon May 18 11:12:40 CST 2020","108385","test_case","test_02_home","TestHomePage","","","test_home_01_my_bar",""
-"passed","Mon May 18 11:10:08 CST 2020","Mon May 18 11:10:52 CST 2020","44221","test_case","test_01_login","TestLogin","","","test_login_01_custom_login[18500228275-111111-登录成功]",""
+"broken","Wed May 20 20:01:14 CST 2020","Wed May 20 20:01:36 CST 2020","22320","test_case","test_02_home","TestHomePage","","","test_home_01_my_bar",""

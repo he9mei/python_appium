@@ -9,32 +9,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "12a97f0f7e1914a5",
+      "uid" : "7441eda8e945f4fc",
       "status" : "broken",
-      "statusDetails" : "ValueError: empty range for randrange() (0, 0, 0)",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.",
       "time" : {
-        "start" : 1589771452514,
-        "stop" : 1589771560899,
-        "duration" : 108385
-      }
-    } ]
-  },
-  "a884dd59d8675823c9ed9596de1e6a3f" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "986ce23f552748db",
-      "status" : "passed",
-      "time" : {
-        "start" : 1589771408288,
-        "stop" : 1589771452509,
-        "duration" : 44221
+        "start" : 1589976074482,
+        "stop" : 1589976096802,
+        "duration" : 22320
       }
     } ]
   }

@@ -4,22 +4,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "ValueError: empty range for randrange() (0, 0, 0)",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.",
       "children" : [ {
         "name" : "test_home_01_my_bar",
-        "uid" : "12a97f0f7e1914a5",
-        "parentUid" : "29467e4edabf9ceb59e72d234a5e6d6b",
+        "uid" : "7441eda8e945f4fc",
+        "parentUid" : "7a823ebd65a5f17ad39e628108c6e522",
         "status" : "broken",
         "time" : {
-          "start" : 1589771452514,
-          "stop" : 1589771560899,
-          "duration" : 108385
+          "start" : 1589976074482,
+          "stop" : 1589976096802,
+          "duration" : 22320
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "29467e4edabf9ceb59e72d234a5e6d6b"
+      "uid" : "7a823ebd65a5f17ad39e628108c6e522"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]

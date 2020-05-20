@@ -1,20 +1,10 @@
 [ {
-  "uid" : "986ce23f552748db",
-  "name" : "test_login_01_custom_login[18500228275-111111-登录成功]",
-  "time" : {
-    "start" : 1589771408288,
-    "stop" : 1589771452509,
-    "duration" : 44221
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "12a97f0f7e1914a5",
+  "uid" : "7441eda8e945f4fc",
   "name" : "test_home_01_my_bar",
   "time" : {
-    "start" : 1589771452514,
-    "stop" : 1589771560899,
-    "duration" : 108385
+    "start" : 1589976074482,
+    "stop" : 1589976096802,
+    "duration" : 22320
   },
   "status" : "broken",
   "severity" : "normal"
