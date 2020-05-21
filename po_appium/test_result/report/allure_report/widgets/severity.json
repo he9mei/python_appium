@@ -1,10 +1,10 @@
 [ {
-  "uid" : "7441eda8e945f4fc",
+  "uid" : "4e2a9ebb34851536",
   "name" : "test_home_01_my_bar",
   "time" : {
-    "start" : 1589976074482,
-    "stop" : 1589976096802,
-    "duration" : 22320
+    "start" : 1590061868860,
+    "stop" : 1590061895054,
+    "duration" : 26194
   },
   "status" : "broken",
   "severity" : "normal"

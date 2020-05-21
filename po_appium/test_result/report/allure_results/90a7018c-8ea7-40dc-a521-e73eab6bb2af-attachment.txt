@@ -1,0 +1,10 @@
+[32mINFO    [0m test_02_home:test_02_home.py:18 ---测试我的个人主页---
+[32mINFO    [0m test_02_home:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+[32mINFO    [0m test_02_home:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+[32mINFO    [0m test_02_home:base_page.py:187 向上滑动第1次
+[32mINFO    [0m test_02_home:base_page.py:142 等待：1s
+[32mINFO    [0m test_02_home:base_page.py:187 向上滑动第2次
+[32mINFO    [0m test_02_home:base_page.py:142 等待：1s
+[1m[31mERROR   [0m test_02_home:settings_page.py:39 用户可能未登录！请先登录！
+[32mINFO    [0m test_02_home:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/common_back')
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/d20da83c-47b0-4dca-ac05-9ff68627041c

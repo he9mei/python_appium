@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Wed May 20 20:01:14 CST 2020","Wed May 20 20:01:36 CST 2020","22320","test_case","test_02_home","TestHomePage","","","test_home_01_my_bar",""
+"broken","Thu May 21 19:51:08 CST 2020","Thu May 21 19:51:35 CST 2020","26194","test_case","test_02_home","TestHomePage","","","test_home_01_my_bar",""

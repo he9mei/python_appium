@@ -73,11 +73,16 @@ def logger():
 # 问题：log使用配置文件的形式，可以；但是无法根据功能做区分。
 # 解决办法：
 # 不使用fixture的方式调用；
-# (conftest.py文件中logger注释；log.conf文件暂时改名，否则还是可以识别，不使用的话会报错)
+# (conftest.py文件中logger注释；log.conf文件暂时改名，放到base文件下，否则还是可以识别，不使用的话会报错)
 # 封装方法获得logger，然后每个py文件调用该方法，并传入py_name
+
+# 问题：每个py文件都重新赋值了logger，但是第二个py文件的log还是放在第一个py文件的py_name文件中。说明还是用的上一个py文件的logger
+# 尝试解决：每个py文件前面生成logger；最后再移除ogger。（移除fh处理器）
+# 结果：这样也不行，最后的解决办法是：每个py文件生成的logger名字不同，使用了py_name
 '''
 
-#发送邮件，尝试在测试用例执行完毕之后，把测试报告当作附件发送
+
+# 发送邮件，尝试在测试用例执行完毕之后，把测试报告当作附件发送
 def send_mail(attachment):
     yag=yagmail.SMTP(user="hehuaimei123@163.com",
                  password="8uhb*UHB",
@@ -98,21 +103,18 @@ def send_mail(attachment):
     #解决办法：使用jerkins执行用例，并且配置邮件自动发送allure和html两种报告
 '''
 
-# 每个py文件都重新赋值了logger，但是第二个py文件的log还是放在第一个py文件的py_name文件中。说明还是用的上一个py文件的logger
-# 尝试解决：每个py文件前面生成logger；最后再移除ogger。（移除fh处理器即可）
-# 这样也不行，最后的解决办法是：每个py文件生成的logger名字不同，使用了py_name
-
 
 # 失败截图方法
 def fail_capture():
-    dt=time.strftime("%Y-%m-%d",time.localtime(time.time()))
-    # tm=time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))  #图片文件名加上日期和时间
-    tm=time.strftime("%H-%M-%S",time.localtime(time.time()))  #由于文件夹是以日期命名的，文件名省去日期
-    path=f"./test_result/fail_capture/{dt}"
+    # now = time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))  #图片文件名加上日期和时间
+    dt = time.strftime("%Y-%m-%d",time.localtime(time.time()))
+    tm = time.strftime("%H-%M-%S",time.localtime(time.time()))  #由于文件夹是以日期命名的，文件名省去日期
+    path = f"./test_result/fail_capture/{dt}"
     try:
         if not os.path.exists(path):
             os.makedirs(path)
-        filename=path+"/"+"fail_"+tm+".png"
+        # filename=path+"/"+"fail_"+tm+".png"
+        filename=f"{path}/fail_{tm}.png"
         # print(f"失败截图方法中的driver是:{app_driver}")  # 确认此处的driver就是setup的driver
         app_driver.get_screenshot_as_file(filename)  # 调用driver的截图方法
 
@@ -127,6 +129,7 @@ def fail_capture():
         print(e)
 
 
+# 失败监听+失败截图
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     '''
@@ -154,8 +157,8 @@ def pytest_runtest_makereport(item, call):
             else:
                 extra = ""
             f.write(rep.nodeid + extra + "\n")
-        # fail_capture()  # 方式1：调用失败截图并加入allure的方法
+        fail_capture()  # 方式1：调用失败截图并加入allure的方法
 
         # 方式2：直接使用以下方式也可以，直接把失败截图添加到allure（但是图片不会保存到本地）
-        with allure.step('添加失败截图'):
-            allure.attach(app_driver.get_screenshot_as_png(), "失败截图", allure.attachment_type.PNG)
+        # with allure.step('添加失败截图'):
+        #     allure.attach(app_driver.get_screenshot_as_png(), "失败截图", allure.attachment_type.PNG)

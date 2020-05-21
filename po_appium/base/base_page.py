@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import os
 import random
+import allure
 
 
 class Base(object):
@@ -96,17 +97,24 @@ class Base(object):
 # 注意点：
 # 1、给定截图的名称为中文，则需添加u，如：get_screenShot(u"个人主页")，否则截图保存的文件名称乱；---貌似不写也没问题
 # 2、若给定的截图名称为英文，则不需添加U
-    def get_screenshot(self,name):
+    def get_screenshot(self, name):
         dt=time.strftime("%Y-%m-%d",time.localtime(time.time()))
         # tm=time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime(time.time()))  #图片文件名加上日期和时间
         tm=time.strftime("%H-%M-%S",time.localtime(time.time()))  #由于文件夹是以日期命名的，文件名省去日期
-        path=f"./test_result/screentshot/{dt}"
+        path=f"./test_result/screenshot/{dt}"
         try:
             if not os.path.exists(path):
                 os.makedirs(path)
             filename=path+"/"+name+"_"+tm+".png"
-            self.driver.get_screenshot_as_file(filename)
+            self.driver.get_screenshot_as_file(filename)  # driver的截图方法
             self.logger.info("截图成功："+name)
+
+            # 如果需要加入报告，可以添加到allure-可以加，也可以不加
+            with allure.step("添加截图"):
+                with open(filename, mode="rb") as f:
+                    file = f.read()
+                allure.attach(file, f"screenshot_{name}", allure.attachment_type.PNG)
+
         except Exception as e:
             self.logger.error("截图失败:"+name)
             print(e)

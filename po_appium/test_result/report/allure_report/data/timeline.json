@@ -4,22 +4,22 @@
   "children" : [ {
     "name" : "hehuaimeideMacBook-Pro.local",
     "children" : [ {
-      "name" : "82935-MainThread",
+      "name" : "88000-MainThread",
       "children" : [ {
         "name" : "test_home_01_my_bar",
-        "uid" : "7441eda8e945f4fc",
-        "parentUid" : "d1fa796b5e2b0114fac8f0eeb38a0066",
+        "uid" : "4e2a9ebb34851536",
+        "parentUid" : "48af10c75c5a1c0c7edd59a11e01eaa1",
         "status" : "broken",
         "time" : {
-          "start" : 1589976074482,
-          "stop" : 1589976096802,
-          "duration" : 22320
+          "start" : 1590061868860,
+          "stop" : 1590061895054,
+          "duration" : 26194
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d1fa796b5e2b0114fac8f0eeb38a0066"
+      "uid" : "48af10c75c5a1c0c7edd59a11e01eaa1"
     } ],
     "uid" : "5a87e13ec9a19d3ff9d8ea6361fe2228"
   } ]
