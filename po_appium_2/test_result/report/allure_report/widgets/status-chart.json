@@ -1,0 +1,11 @@
+[ {
+  "uid" : "3f890200b310869f",
+  "name" : "test_login_01_custom_login[18500228275-123456-登录成功]",
+  "time" : {
+    "start" : 1594816019348,
+    "stop" : 1594816052657,
+    "duration" : 33309
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

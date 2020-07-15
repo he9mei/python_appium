@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "hehuaimeideMacBook-Pro.local",
+    "children" : [ {
+      "name" : "81801-MainThread",
+      "children" : [ {
+        "name" : "test_login_01_custom_login[18500228275-123456-登录成功]",
+        "uid" : "3f890200b310869f",
+        "parentUid" : "f3c120ad5d99f49fd066a34f76297644",
+        "status" : "passed",
+        "time" : {
+          "start" : 1594816019348,
+          "stop" : 1594816052657,
+          "duration" : 33309
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'18500228275'", "'123456'", "'登录成功'" ]
+      } ],
+      "uid" : "f3c120ad5d99f49fd066a34f76297644"
+    } ],
+    "uid" : "5a87e13ec9a19d3ff9d8ea6361fe2228"
+  } ]
+}

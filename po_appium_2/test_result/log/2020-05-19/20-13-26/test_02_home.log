@@ -1,0 +1,9 @@
+2020/05/19/20:13:46-[test_02_home.py-test_home_01_my_bar]-INFO-[line:18]----测试我的个人主页---
+2020/05/19/20:13:53-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/20:13:53-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/05/19/20:13:55-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第1次
+2020/05/19/20:13:56-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/20:13:57-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第2次
+2020/05/19/20:13:58-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/20:14:09-[settings_page.py-is_login]-ERROR-[line:39]-用户可能未登录！请先登录！
+2020/05/19/20:14:09-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_back')

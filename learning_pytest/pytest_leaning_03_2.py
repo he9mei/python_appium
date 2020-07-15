@@ -56,9 +56,9 @@ $ allure serve %allure_result_folder% //查看报告
 问题：
 以上serve打开报告，之后再打开还需要这样操作比较麻烦，可以使用以下命令，生成index.html
 
--->allure generate ./report/allure_report/ -o ./report/allure_report/html --clean
+-->allure generate ./report/allure_result/ -o ./report/allure_report/ --clean
 或者
--->allure generate ./report/allure_report/ -c -o ./report/allure_report/html
+-->allure generate ./report/allure_result/ -c -o ./report/allure_report/
 
 结果：Report successfully generated to ./report/allure_report/html
 操作后index.html即会放在./report/allure_report/html路径下

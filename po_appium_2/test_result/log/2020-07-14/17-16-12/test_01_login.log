@@ -1,0 +1,13 @@
+2020/07/14/17:16:23-[test_01_login.py-test_login_01_custom_login]-INFO-[line:41]----测试登录流程---
+2020/07/14/17:17:24-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/14/17:17:42-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/07/14/17:17:43-[base_page.py-swipe_up]-INFO-[line:187]-向上滑动第1次
+2020/07/14/17:17:44-[base_page.py-wait]-INFO-[line:142]-等待：1s
+2020/07/14/17:17:45-[base_page.py-swipe_up]-INFO-[line:187]-向上滑动第2次
+2020/07/14/17:17:46-[base_page.py-wait]-INFO-[line:142]-等待：1s
+2020/07/14/17:17:46-[base_page.py-is_displayed]-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/login')
+2020/07/14/17:17:46-[settings_page.py-logout]-INFO-[line:22]-用户已登录!
+2020/07/14/17:17:46-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/login')
+2020/07/14/17:17:46-[base_page.py-get_toast]-INFO-[line:125]-el_toast：('xpath', "//*[contains(@text,'退出登录成功')]")
+2020/07/14/17:17:57-[base_page.py-get_toast]-ERROR-[line:130]-获取toast'退出登录成功'失败-time out
+2020/07/14/17:17:57-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/common_back')

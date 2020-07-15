@@ -1,0 +1,18 @@
+2020/07/15/15:20:44-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')
+2020/07/15/15:21:11-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/07/15/15:21:28-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')
+2020/07/15/15:21:50-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/07/15/15:22:08-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')
+2020/07/15/15:22:33-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/07/15/15:22:50-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')
+2020/07/15/15:23:13-[base_page.py-get_toast]-ERROR-[line:131]-获取toast'用户名或密码输入错误'失败-time out
+2020/07/15/15:23:13-[login_page.py-custom_login]-ERROR-[line:94]-没有获取到登录toast!
+2020/07/15/15:23:24-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/07/15/15:23:41-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')
+2020/07/15/15:24:04-[base_page.py-get_toast]-ERROR-[line:131]-获取toast'该用户名不存在'失败-time out
+2020/07/15/15:24:04-[login_page.py-custom_login]-ERROR-[line:94]-没有获取到登录toast!
+2020/07/15/15:24:14-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/07/15/15:24:32-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')
+2020/07/15/15:24:54-[base_page.py-get_toast]-ERROR-[line:131]-获取toast'登录成功'失败-time out
+2020/07/15/15:24:54-[login_page.py-custom_login]-ERROR-[line:94]-没有获取到登录toast!
+2020/07/15/15:25:05-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/nickname_tv')

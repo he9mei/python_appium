@@ -1,0 +1,2 @@
+2020/07/14/17:15:31-[test_01_login.py-test_login_01_custom_login]-INFO-[line:41]----测试登录流程---
+2020/07/14/17:15:43-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')

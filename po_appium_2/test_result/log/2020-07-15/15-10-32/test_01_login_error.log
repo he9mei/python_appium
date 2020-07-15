@@ -1,0 +1,6 @@
+2020/07/15/15:11:27-[base_page.py-locator_element]-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/15/15:11:40-[base_page.py-locator_element]-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/15/15:11:51-[base_page.py-locator_element]-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/15/15:12:03-[base_page.py-locator_element]-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/15/15:12:15-[base_page.py-locator_element]-ERROR-[line:32]-找不到元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/15/15:12:42-[base_page.py-is_displayed]-ERROR-[line:71]-元素未出现：('id', 'com.dangdang.reader:id/login')

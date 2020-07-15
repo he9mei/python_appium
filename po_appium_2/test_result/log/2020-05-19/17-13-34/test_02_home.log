@@ -1,0 +1,33 @@
+2020/05/19/17:13:55-[test_02_home.py-test_home_01_my_bar]-INFO-[line:18]----测试我的个人主页---
+2020/05/19/17:14:00-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/17:14:01-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/05/19/17:14:02-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第1次
+2020/05/19/17:14:03-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:14:04-[base_page.py-swipe_up]-INFO-[line:179]-向上滑动第2次
+2020/05/19/17:14:05-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:14:05-[base_page.py-is_displayed]-INFO-[line:65]-元素出现：('id', 'com.dangdang.reader:id/login')
+2020/05/19/17:14:05-[settings_page.py-is_login]-INFO-[line:36]-用户已登录!
+2020/05/19/17:14:06-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_back')
+2020/05/19/17:14:07-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/19/17:14:08-[base_page.py-swipe_down]-INFO-[line:192]-向下滑动第1次
+2020/05/19/17:14:09-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:14:09-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/05/19/17:14:11-[base_page.py-explicitly_wait]-INFO-[line:148]-显式等待-元素出现：('id', 'com.dangdang.reader:id/book_layout')
+2020/05/19/17:14:12-[base_page.py-get_screenshot]-INFO-[line:109]-截图成功：个人主页
+2020/05/19/17:14:22-[base_page.py-swipe_up_to_el]-INFO-[line:240]-滑动到元素-元素暂未出现
+2020/05/19/17:14:23-[base_page.py-swipe_up_to_el]-INFO-[line:243]-滑动到元素-向上缓慢滑动第1次
+2020/05/19/17:14:35-[base_page.py-swipe_up_to_el]-INFO-[line:240]-滑动到元素-元素暂未出现
+2020/05/19/17:14:36-[base_page.py-swipe_up_to_el]-INFO-[line:243]-滑动到元素-向上缓慢滑动第2次
+2020/05/19/17:14:47-[base_page.py-swipe_up_to_el]-INFO-[line:240]-滑动到元素-元素暂未出现
+2020/05/19/17:14:48-[base_page.py-swipe_up_to_el]-INFO-[line:243]-滑动到元素-向上缓慢滑动第3次
+2020/05/19/17:14:59-[base_page.py-swipe_up_to_el]-INFO-[line:240]-滑动到元素-元素暂未出现
+2020/05/19/17:15:00-[base_page.py-swipe_up_to_el]-INFO-[line:243]-滑动到元素-向上缓慢滑动第4次
+2020/05/19/17:15:01-[base_page.py-swipe_up_to_el]-INFO-[line:236]-滑动到元素-成功：('id', 'com.dangdang.reader:id/pay_rl')
+2020/05/19/17:15:02-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:15:03-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:15:03-[base_page.py-click_index]-INFO-[line:86]-按序号点击元素[0]：('id', 'com.dangdang.reader:id/pay_rl')
+2020/05/19/17:15:04-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:15:05-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/bar_info_title_back')
+2020/05/19/17:15:05-[base_page.py-click_random]-INFO-[line:93]-随机点击元素[1]：('id', 'com.dangdang.reader:id/pay_rl')
+2020/05/19/17:15:06-[base_page.py-wait]-INFO-[line:134]-等待：1s
+2020/05/19/17:15:07-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/bar_info_title_back')

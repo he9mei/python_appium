@@ -1,0 +1,25 @@
+2020/05/18/19:59:44-[test_01_login.py-test_login_01_custom_login]-INFO-[line:39]----测试登录流程---
+2020/05/18/19:59:53-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/18/19:59:54-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/05/18/19:59:55-[base_page.py-swipe_up]-INFO-[line:181]-向上滑动第1次
+2020/05/18/19:59:56-[base_page.py-wait]-INFO-[line:136]-等待：1s
+2020/05/18/19:59:57-[base_page.py-swipe_up]-INFO-[line:181]-向上滑动第2次
+2020/05/18/19:59:58-[base_page.py-wait]-INFO-[line:136]-等待：1s
+2020/05/18/20:00:09-[settings_page.py-logout]-INFO-[line:29]-找不到退出按钮，可能目前未登录。
+2020/05/18/20:00:09-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/common_back')
+2020/05/18/20:00:10-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/05/18/20:00:11-[base_page.py-swipe_down]-INFO-[line:194]-向下滑动第1次
+2020/05/18/20:00:12-[base_page.py-wait]-INFO-[line:136]-等待：1s
+2020/05/18/20:00:12-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/05/18/20:00:14-[base_page.py-is_displayed]-INFO-[line:65]-元素出现：('id', 'com.dangdang.reader:id/custom_login_tv')
+2020/05/18/20:00:14-[login_page.py-custom_login_enter]-INFO-[line:24]-找到账号密码登录入口！
+2020/05/18/20:00:14-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/custom_login_tv')
+2020/05/18/20:00:17-[base_page.py-send_keys]-INFO-[line:57]-元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+2020/05/18/20:00:20-[base_page.py-send_keys]-INFO-[line:57]-元素：('id', 'com.dangdang.reader:id/password_et') 输入：111111
+2020/05/18/20:00:20-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/private_switch_btn')
+2020/05/18/20:00:21-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/login_tv')
+2020/05/18/20:00:21-[login_page.py-custom_login]-INFO-[line:81]-正在登录：18500228275,111111
+2020/05/18/20:00:21-[base_page.py-get_toast]-INFO-[line:119]-el_toast：('xpath', "//*[contains(@text,'登录成功')]")
+2020/05/18/20:00:31-[base_page.py-get_toast]-ERROR-[line:124]-获取toast'登录成功'失败-time out
+2020/05/18/20:00:31-[base_page.py-is_displayed]-INFO-[line:65]-元素出现：('id', 'com.dangdang.reader:id/name_edit')
+2020/05/18/20:00:31-[base_page.py-click]-INFO-[line:37]-点击元素：('id', 'com.dangdang.reader:id/back_iv')

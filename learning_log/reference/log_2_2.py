@@ -12,7 +12,7 @@ rq=time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime(time.time()))
 
 class Log(object):
     def __init__(self, case_name):
-        self.path = "/Users/hehuaimei/PycharmProjects/python_appium/po_appium/test_result/log/"
+        self.path = "/Users/hehuaimei/PycharmProjects/python_appium/po_appium_1/test_result/log/"
         self.filename = case_name+"_"+rq+".log"
         self.formatter = logging.Formatter('%(asctime)s-%(filename)s-%(levelname)s-[line:%(lineno)d]-%(message)s')
 

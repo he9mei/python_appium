@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jul 15 20:26:59 CST 2020","Wed Jul 15 20:27:32 CST 2020","33309","test_case","test_01_login","TestLogin","","","test_login_01_custom_login[18500228275-123456-登录成功]",""
