@@ -1,0 +1,17 @@
+2020/07/16/16:44:58-[test_01_login.py-test_login_01_custom_login]-INFO-[line:41]----测试登录流程---
+2020/07/16/16:45:05-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/16/16:45:07-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/07/16/16:45:08-[base_page.py-swipe_up]-INFO-[line:188]-向上滑动第1次
+2020/07/16/16:45:09-[base_page.py-wait]-INFO-[line:143]-等待：1s
+2020/07/16/16:45:10-[base_page.py-swipe_up]-INFO-[line:188]-向上滑动第2次
+2020/07/16/16:45:11-[base_page.py-wait]-INFO-[line:143]-等待：1s
+2020/07/16/16:45:11-[base_page.py-is_displayed]-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/login')
+2020/07/16/16:45:11-[settings_page.py-logout]-INFO-[line:23]-用户已登录!
+2020/07/16/16:45:11-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/login')
+2020/07/16/16:45:11-[base_page.py-get_toast]-INFO-[line:126]-el_toast：('xpath', "//*[contains(@text,'退出登录成功')]")
+2020/07/16/16:45:14-[base_page.py-get_toast]-INFO-[line:128]-获取toast值为：退出登录成功
+2020/07/16/16:45:15-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/common_back')
+2020/07/16/16:45:16-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/16/16:45:17-[base_page.py-swipe_down]-INFO-[line:201]-向下滑动第1次
+2020/07/16/16:45:18-[base_page.py-wait]-INFO-[line:143]-等待：1s
+2020/07/16/16:45:19-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/nickname_tv')

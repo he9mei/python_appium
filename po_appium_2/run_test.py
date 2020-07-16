@@ -3,8 +3,10 @@ import pytest
 import time
 import os
 
+
 case_path = "./test_case/test_01_login.py"
-rerun = 1
+rerun = "1"  # 这里需要写出str格式，如果直接写成数字1，后面使用时需要str(rerun)
+
 
 @click.command()   # 需要先安装click插件，并导入click
 @click.option("-m", default=None, help="输入运行模式：run 或者 debug")
@@ -25,7 +27,7 @@ def run(m):
                      "--alluredir="+allure_results,
                      "--clean-alluredir",
                      "--self-contained-html",
-                     "--reruns", str(rerun)])  # "--reruns"+str(rerun) 这种写法错误 reruns 和 rerun要当成2个命令写
+                     "--reruns", rerun])  # "--reruns"+rerun 这种写法错误 reruns 和 rerun要当成2个命令写
     elif m == "debug":
         print("debug模式执行用例！")
         pytest.main(["-s","-v",case_path])

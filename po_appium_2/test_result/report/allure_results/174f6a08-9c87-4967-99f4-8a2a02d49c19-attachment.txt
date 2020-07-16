@@ -16,15 +16,15 @@
 [32mINFO    [0m test_01_login:base_page.py:143 等待：1s
 [32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
 [32mINFO    [0m test_01_login:base_page.py:66 元素出现：('id', 'com.dangdang.reader:id/custom_login_tv')
-[32mINFO    [0m test_01_login:login_page.py:24 找到账号密码登录入口！
+[32mINFO    [0m test_01_login:login_page.py:29 找到账号密码登录入口！
 [32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/custom_login_tv')
 [32mINFO    [0m test_01_login:base_page.py:58 元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
 [32mINFO    [0m test_01_login:base_page.py:58 元素：('id', 'com.dangdang.reader:id/password_et') 输入：123456
 [32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/private_switch_btn')
 [32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/login_tv')
-[32mINFO    [0m test_01_login:login_page.py:82 正在登录：18500228275,123456
+[32mINFO    [0m test_01_login:login_page.py:89 正在登录：18500228275,123456
 [32mINFO    [0m test_01_login:base_page.py:126 el_toast：('xpath', "//*[contains(@text,'登录成功')]")
 [32mINFO    [0m test_01_login:base_page.py:128 获取toast值为：登录成功
-[32mINFO    [0m test_01_login:login_page.py:89 已登录成功!
+[32mINFO    [0m test_01_login:login_page.py:96 已登录成功!
 [32mINFO    [0m test_01_login:base_page.py:66 元素出现：('id', 'com.dangdang.reader:id/nickname_tv')
-[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/b48fa023-0ea5-4465-83c8-0c996583c051
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/fcf69b79-44bb-453b-bcce-f2e8ea99826a

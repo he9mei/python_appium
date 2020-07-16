@@ -255,3 +255,12 @@ class BasePage(object):
             self.logger.info("滑动到元素-失败：" + str(locator))
         self.wait(1)
 
+# 以下方法来自书籍web自动化，不一定有用
+    def get_title(self):  #获取title
+        return self.driver.title
+
+    def get_text(self,xpath):  # 获取页面text，仅使用xpath定位
+        return self.driver.find_element_by_xpath(xpath).text
+
+    def js(self,script):   # 执行js代码
+        self.driver.execute_script(script)

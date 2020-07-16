@@ -5,13 +5,18 @@ from po_appium_2.page_object.personal_page import PersonalPage
 from po_appium_2.page_object.settings_page import SettingsPage
 from po_appium_2.page_object.common_page import CommonPage
 
+# from poium import Page, PageElement, PageElements  # poium尝试,需要先安装poium
+
 
 class LoginPage(BasePage):
+# class LoginPage(BasePage, Page):  # 尝试使用poium，需要继承Page
     #元素
     el_custom_login_enter=(By.ID,"com.dangdang.reader:id/custom_login_tv")
     el_name_input=(By.ID,"com.dangdang.reader:id/name_edit")
+    # el_name_input = PageElement(id_="com.dangdang.reader:id/name_edit")  # 尝试一个输入框改成poium
     el_pw_input=(By.ID,"com.dangdang.reader:id/password_et")
     el_login_bn=(By.ID,"com.dangdang.reader:id/login_tv")
+    # el_login_bn = PageElement(id_="com.dangdang.reader:id/login_tv")  # 尝试一个按钮改成poium
     el_private_switch=(By.ID,"com.dangdang.reader:id/private_switch_btn")
 
     def custom_login_enter(self):
@@ -75,10 +80,12 @@ class LoginPage(BasePage):
 
         # 验证toast的登录，参数化
         self.send_keys(account, *self.el_name_input)
+        # self.el_name_input = account   # 尝试使用poium，输入的写法不一样
         self.send_keys(pw, *self.el_pw_input)
         # self.driver.press_keycode(4)  #华为手机点击登录时虚拟键盘没有自动关闭，乐蒙手机是好的
         self.click(*self.el_private_switch)  # 新版本需要勾选
         self.click(*self.el_login_bn)
+        # self.el_login_bn.click()   # 尝试使用poium，点击的写法不一样
         self.logger.info("正在登录：" + account + "," + pw)
 
         try:
