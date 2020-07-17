@@ -7,7 +7,7 @@ pytest的配置文件通常放在测试目录下，名称为pytest.ini，命令�
 addopts=-s  命令行运行参数，多个参数时空格隔开
 testpaths=./scripts  测试搜索的路径，测试用例放在当前目录的scripts文件夹内
 python_files=test_*.py  测试搜索的文件名，当前目录的scripts文件夹内，以test_开头，以.py结尾的所有文件
-python_classes=Test_*  测试搜索的类名
+python_classes=Test*  测试搜索的类名
 python_functions=test_*  测试搜索的函数名
 
 注意：pytest.ini文件不能有中文，中文注释也是不行的
@@ -16,7 +16,7 @@ python_functions=test_*  测试搜索的函数名
 [pytest]
 addopts=-s
 testpaths=./learning_pytest
-python_files=test_06.py
+python_files=test_06_setup.py
 python_classes=Test*
 python_functions=test_*
 

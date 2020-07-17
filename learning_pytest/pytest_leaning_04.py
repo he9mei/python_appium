@@ -7,5 +7,6 @@ from pytest付费课程
 （2）函数级别，对不在测试类中对测试用例作用 setup_function / teardown_function
 （3）类级别，对测试类作用 setup_class / teardown_class
 （4）方法级别，对测试类中的测试用例作用 setup_method / teardown_method
+补充：setup/teardown可以放在类里面，也可以放在类外面
 '''
-# 实例见test_05.py/test_06.py
+# 实例见test_05.py/test_06_setup.py

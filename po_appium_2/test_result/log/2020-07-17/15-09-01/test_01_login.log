@@ -1,0 +1,29 @@
+2020/07/17/15:09:20-[test_01_login.py-test_login_01_custom_login]-INFO-[line:41]----测试登录流程---
+2020/07/17/15:09:28-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/17/15:09:29-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+2020/07/17/15:09:30-[base_page.py-swipe_up]-INFO-[line:188]-向上滑动第1次
+2020/07/17/15:09:31-[base_page.py-wait]-INFO-[line:143]-等待：1s
+2020/07/17/15:09:32-[base_page.py-swipe_up]-INFO-[line:188]-向上滑动第2次
+2020/07/17/15:09:33-[base_page.py-wait]-INFO-[line:143]-等待：1s
+2020/07/17/15:09:33-[base_page.py-is_displayed]-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/login')
+2020/07/17/15:09:33-[settings_page.py-logout]-INFO-[line:23]-用户已登录!
+2020/07/17/15:09:33-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/login')
+2020/07/17/15:09:33-[base_page.py-get_toast]-INFO-[line:126]-el_toast：('xpath', "//*[contains(@text,'退出登录成功')]")
+2020/07/17/15:09:36-[base_page.py-get_toast]-INFO-[line:128]-获取toast值为：退出登录成功
+2020/07/17/15:09:36-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/common_back')
+2020/07/17/15:09:38-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+2020/07/17/15:09:39-[base_page.py-swipe_down]-INFO-[line:201]-向下滑动第1次
+2020/07/17/15:09:40-[base_page.py-wait]-INFO-[line:143]-等待：1s
+2020/07/17/15:09:40-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+2020/07/17/15:09:42-[base_page.py-is_displayed]-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/custom_login_tv')
+2020/07/17/15:09:42-[login_page.py-custom_login_enter]-INFO-[line:29]-找到账号密码登录入口！
+2020/07/17/15:09:42-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/custom_login_tv')
+2020/07/17/15:09:45-[base_page.py-send_keys]-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+2020/07/17/15:09:47-[base_page.py-send_keys]-INFO-[line:58]-元素：('id', 'com.dangdang.reader:id/password_et') 输入：123456
+2020/07/17/15:09:48-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/private_switch_btn')
+2020/07/17/15:09:49-[base_page.py-click]-INFO-[line:38]-点击元素：('id', 'com.dangdang.reader:id/login_tv')
+2020/07/17/15:09:49-[login_page.py-custom_login]-INFO-[line:89]-正在登录：18500228275,123456
+2020/07/17/15:09:49-[base_page.py-get_toast]-INFO-[line:126]-el_toast：('xpath', "//*[contains(@text,'登录成功')]")
+2020/07/17/15:09:53-[base_page.py-get_toast]-INFO-[line:128]-获取toast值为：登录成功
+2020/07/17/15:09:54-[login_page.py-custom_login]-INFO-[line:96]-已登录成功!
+2020/07/17/15:09:54-[base_page.py-is_displayed]-INFO-[line:66]-元素出现：('id', 'com.dangdang.reader:id/nickname_tv')

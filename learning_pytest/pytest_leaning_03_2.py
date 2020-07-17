@@ -60,11 +60,11 @@ $ allure serve %allure_result_folder% //查看报告
 或者
 -->allure generate ./report/allure_result/ -c -o ./report/allure_report/
 
-结果：Report successfully generated to ./report/allure_report/html
-操作后index.html即会放在./report/allure_report/html路径下
+结果：Report successfully generated to ./report/allure_report
+操作后index.html即会放在./report/allure_report路径下
 备注:
-./report/allure_report/ 是之前生成的allure结果的文件的路径
-./report/allure_report/html 是根据之前生成的allure结果的文件再生成index.html的存放路径，可以自己绝对存放位置
+./report/allure_result/ 是之前生成的allure结果的文件的路径
+./report/allure_report/ 是根据之前生成的allure结果的文件再生成index.html的存放路径，可以自己绝对存放位置
 --clean 如果html这个路径已经存在，则先删除html文件。
 也可以写成-c
 ------------------------------------------------

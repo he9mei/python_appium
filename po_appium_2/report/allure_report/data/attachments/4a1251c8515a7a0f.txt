@@ -1,0 +1,30 @@
+[32mINFO    [0m test_01_login:test_01_login.py:41 ---测试登录流程---
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
+[32mINFO    [0m test_01_login:base_page.py:188 向上滑动第1次
+[32mINFO    [0m test_01_login:base_page.py:143 等待：1s
+[32mINFO    [0m test_01_login:base_page.py:188 向上滑动第2次
+[32mINFO    [0m test_01_login:base_page.py:143 等待：1s
+[32mINFO    [0m test_01_login:base_page.py:66 元素出现：('id', 'com.dangdang.reader:id/login')
+[32mINFO    [0m test_01_login:settings_page.py:23 用户已登录!
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/login')
+[32mINFO    [0m test_01_login:base_page.py:126 el_toast：('xpath', "//*[contains(@text,'退出登录成功')]")
+[32mINFO    [0m test_01_login:base_page.py:128 获取toast值为：退出登录成功
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/common_back')
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
+[32mINFO    [0m test_01_login:base_page.py:201 向下滑动第1次
+[32mINFO    [0m test_01_login:base_page.py:143 等待：1s
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/nickname_tv')
+[32mINFO    [0m test_01_login:base_page.py:66 元素出现：('id', 'com.dangdang.reader:id/custom_login_tv')
+[32mINFO    [0m test_01_login:login_page.py:29 找到账号密码登录入口！
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/custom_login_tv')
+[32mINFO    [0m test_01_login:base_page.py:58 元素：('id', 'com.dangdang.reader:id/name_edit') 输入：18500228275
+[32mINFO    [0m test_01_login:base_page.py:58 元素：('id', 'com.dangdang.reader:id/password_et') 输入：123456
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/private_switch_btn')
+[32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/login_tv')
+[32mINFO    [0m test_01_login:login_page.py:89 正在登录：18500228275,123456
+[32mINFO    [0m test_01_login:base_page.py:126 el_toast：('xpath', "//*[contains(@text,'登录成功')]")
+[32mINFO    [0m test_01_login:base_page.py:128 获取toast值为：登录成功
+[32mINFO    [0m test_01_login:login_page.py:96 已登录成功!
+[32mINFO    [0m test_01_login:base_page.py:66 元素出现：('id', 'com.dangdang.reader:id/nickname_tv')
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/2649da81-b04a-4b1b-bb86-ae32e67406ff

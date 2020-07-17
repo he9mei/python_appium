@@ -8,13 +8,13 @@
 （备注：测试用例可以写在类中，也可以不需要类直接写在函数中）
 如：
 if __name__=="__main__":
-    pytest.main("-s test_04.py")
+    pytest.main("-s test_04_main.py")
 
 pycharm的Terminal执行命令如下：
 -->pytest
 当前路径下的用例全部执行
-learning_pytest/test_01.py ..                                                                                                       [ 50%]
-learning_pytest/test_02.py ..
+learning_pytest/test_01_m_k.py ..                                                                                                       [ 50%]
+learning_pytest/test_02_skip.py ..
 
 -->pyetst -s -m "test"
 针对标记执行某些用例
@@ -23,14 +23,14 @@ learning_pytest/test_02.py ..
 mark标记官方文档：https://docs.pytest.org/en/latest/mark.html
 报警解决办法：https://www.cnblogs.com/TestTan/p/11493177.html
 
--->pytest learning_pytest/test_01.py
+-->pytest learning_pytest/test_01_m_k.py
 执行指定路径/指定py文件
 如果不想执行某些类或者函数，可标记跳过，在该类或函数前加上：@pytest.mark.skip
 
--->pytest learning_pytest/test_01.py::TestDemo
+-->pytest learning_pytest/test_01_m_k.py::TestDemo
 执行指定路径/指定py文件::指定class
 
--->pytest learning_pytest/test_01.py::TestDemo::test_test1
+-->pytest learning_pytest/test_01_m_k.py::TestDemo::test_test1
 执行指定路径/指定py文件::指定class::指定函数
 
 2.常用参数说明：
@@ -44,10 +44,10 @@ mark标记官方文档：https://docs.pytest.org/en/latest/mark.html
 进一步说明：
 -v
 加上-v可以看到每个函数的执行结果。如，
-pytest -v learning_pytest/test_01.py
+pytest -v learning_pytest/test_01_m_k.py
 结果为：
-learning_pytest/test_01.py::TestDemo::test_test1 PASSED                                                                             [ 50%]
-learning_pytest/test_01.py::TestDemo::test_test2 PASSED
+learning_pytest/test_01_m_k.py::TestDemo::test_test1 PASSED                                                                             [ 50%]
+learning_pytest/test_01_m_k.py::TestDemo::test_test2 PASSED
 其他的，如关键字k，失败重跑lf、ff后续再验证。==pytest --lf已经验证，可以重跑上次失败的用例集合。
 -m
 如果用例中包含多个分组，想要只运行其中一个组，则使用-m "组名"的方式。

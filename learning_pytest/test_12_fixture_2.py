@@ -6,9 +6,10 @@
 并且全部用例执行完之后，yield呼唤teardown擦操作。
 
 '''
-#实例1
-
 import pytest
+from selenium import webdriver
+
+#实例1
 #创建fixture
 @pytest.fixture()
 def open():
@@ -19,3 +20,46 @@ def open():
 #使用fixture
 def test_shoppping(open):
     print("测试购物")
+
+
+# -----以下新增实际使用时的获取driver的setup和teardown------
+# yield写法1---第1中写法的问题是，不能返回值
+@pytest.fixture(scope="session",autouse=True)
+def browser():
+    driver=webdriver.Chrome()
+    driver.implicitly_wait(10)
+    print('启动driver')
+
+    yield
+    driver.quit()
+    print("关闭driver")
+
+
+# yield写法2---第2种写法，可以获得返回值
+driver=None
+@pytest.fixture(scope="session",autouse=True)
+def browser():
+    global driver
+    driver=webdriver.Chrome()
+    driver.implicitly_wait(10)
+    print('启动driver')
+    return driver
+
+def browser_end():
+    yield driver
+    driver.quit()
+    print("关闭driver")
+
+# 第3种写法使用addfinalizer---第3种写法，可以获得返回值
+@pytest.fixture(scope="session",autouse=True)
+def browser(request):
+    driver=webdriver.Chrome()
+    driver.implicitly_wait(10)
+    print("启动driver")
+
+    def end():
+        driver.quit()
+        print("关闭driver")
+
+    request.addfinalizer(end)
+    return driver

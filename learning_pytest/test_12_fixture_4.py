@@ -26,4 +26,4 @@ def test_login(login):
     print(f"登录信息是：{login}")
 
 if __name__=="__main__":
-    pytest.main("-s -v test_12_fixture_4.py")
+    pytest.main(["-s","-v","test_12_fixture_4.py"])

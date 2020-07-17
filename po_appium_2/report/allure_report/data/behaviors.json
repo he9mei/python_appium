@@ -1,0 +1,18 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_login_01_custom_login[18500228275-123456-登录成功]",
+    "uid" : "205ca113f397a80d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1594969760066,
+      "stop" : 1594969794459,
+      "duration" : 34393
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'18500228275'", "'123456'", "'登录成功'" ]
+  } ]
+}

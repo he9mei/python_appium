@@ -7,7 +7,7 @@ fixture相对于setup和teardown来说应该有以下几点优势：
 （3）scope="module"可以实现多个.py跨文件共享前置，每一个.py文件调用一次。
 （4）scope="session"可以实现多个.py跨文件使用一个session来完成多个用例。
 使用：
-fixtue(scope="function",params=None,autouse=false,ids=None,name=None)
+fixture(scope="function",params=None,autouse=false,ids=None,name=None)
   使用装饰器标记fixture的功能
   可以使用此装饰器（带或不带参数）来定义fixture功能，fixture功能的名称可以在以后使用。
   引用它会在测试之前调用它：test模块或类可以使用pytest.mark.usefixtures(fixture名称)

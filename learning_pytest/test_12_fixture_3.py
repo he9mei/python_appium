@@ -10,7 +10,7 @@ import pytest
 from selenium import webdriver
 
 #创建fixture
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session",autouse=True)
 def open(request):
     driver=webdriver.Chrome()
     print("打开浏览器")
@@ -30,7 +30,7 @@ def test_baidu(open):
     assert "百度" in title
 
 if __name__=="__main__":
-    pytest.main("-s -v test_12_fixture_3.py")
+    pytest.main(["-s","-v","test_12_fixture_3.py"])
 
 '''
 执行结果：
