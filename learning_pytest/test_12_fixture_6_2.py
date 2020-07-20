@@ -12,14 +12,19 @@ import pytest
 from time import sleep
 
 class TestBaiduSearch2:
+    @pytest.mark.skip
     @pytest.mark.parametrize("search_key",["python","pytest"])
-    def test_search2_1(self,driver,search_key):
-        driver.get("http://www.baidu.com")
+    def test_search2_1(self,driver,search_key,url):
+        # driver.get("http://www.baidu.com")
+        driver.get(url)   # 使用conftest.py中的url
         driver.find_element_by_id("kw").send_keys(search_key)
         sleep(2)
         driver.find_element_by_id("su").click()
 
+    def test_test(self,url):  # 验证conftest.py中的url是否正常获取
+        print(url)
+
     if __name__=="__main__":
-        pytest.main("-s","-v","test_12_fixture_6_2.py")
+        pytest.main(["-s","-v","test_12_fixture_6_2.py"])
 
-
+# 以上变更：搜索词参数化

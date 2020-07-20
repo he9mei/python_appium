@@ -20,3 +20,9 @@ def driver(request):
     request.addfinalizer(end)
 
     return driver
+
+
+# 补充：使用钩子函数传值
+@pytest.fixture(scope="session",autouse=True)
+def url():
+    return "http://www.baidu.com"

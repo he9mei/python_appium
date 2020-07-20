@@ -31,4 +31,12 @@ pytest-html报告模式
 pytest-html参考：
 https://www.cnblogs.com/yoyoketang/p/9444463.html
 
+书籍补充：
+pytest无需安装插件的报告：
+1.xml报告
+pytest ./test.py --junit-xml=./report/junit-xml.xml
+2.session-log链接
+pytest ./test.py --pastebin=all
+执行完毕后会生成一个seesion-log链接，打开即可
+
 '''

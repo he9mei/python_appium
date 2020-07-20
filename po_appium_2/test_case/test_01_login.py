@@ -1,7 +1,21 @@
-from po_appium_2.page_object.login_page import LoginPage
-from po_appium_2.page_object.settings_page import SettingsPage
-import pytest
+# from po_appium_2.page_object.login_page import LoginPage
+# from po_appium_2.page_object.settings_page import SettingsPage
+# 跨目录调用文件，写法更新
+# 1.将跨目录的文件路径加入系统路径，
+# abspath(__file__)是当前路径的绝对路径
+# dirname(path)表示path路径的上一级路径
+import sys
+from os.path import abspath, dirname
+project_path=dirname(dirname(abspath(__file__)))
+sys.path.append(project_path+"/page_object")
+# 2.对以上LoginPage、SettingsPage的导入做改写
+from login_page import LoginPage
+from settings_page import SettingsPage
+# 说明：以上未报错是因为，永久添加了page_object到sys.path，否则还是会报错。
+# 具体见：learning_path.py
 
+import pytest
+# log相关导入
 from po_appium_2.base.log import Log
 from pathlib import Path
 
