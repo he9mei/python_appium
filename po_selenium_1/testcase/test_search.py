@@ -1,4 +1,4 @@
-from po_selenium.page_object.search_page import Search
+from po_selenium_1.page_object.search_page import Search
 import pytest
 from time import sleep
 
@@ -27,6 +27,6 @@ class TestSearch(object):
 
 if __name__=="__main__":
     pytest.main("-s -v --html=./report/report.html test_search.py")
-    #先cd po_selenium
-    #完成路径为cd /Users/hehuaimei/PycharmProjects/python_appium/po_selenium
+    #先cd po_selenium_1
+    #完成路径为cd /Users/hehuaimei/PycharmProjects/python_appium/po_selenium_1
 

@@ -1,4 +1,4 @@
-from po_selenium_second_pytest.page_object.search_page import Search
+from po_selenium_2.page_object.search_page import Search
 import pytest
 
 

@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from po_selenium_second_pytest.base.base_page import Base
+from po_selenium_2.base.base_page import Base
 
 
 class Search(Base):

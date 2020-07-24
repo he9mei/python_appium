@@ -51,7 +51,7 @@ class BasePage(object):
         '''
 
     def send_keys(self, text, *locator):
-        self.sys_input_method("appiumUnicode")
+        # self.sys_input_method("appiumUnicode")  #driver配置时，新增启动了unicode，此处则可以省略
         self.locator_element(*locator).clear()
         self.locator_element(*locator).send_keys(text)
         # print(f"元素：{locator} 输入：{text}")

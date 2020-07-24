@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from po_selenium.base.base_page import Base
+from po_selenium_1.base.base_page import Base
 from time import sleep
 
 class Search(Base):

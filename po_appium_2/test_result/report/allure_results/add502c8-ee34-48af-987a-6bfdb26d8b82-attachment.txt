@@ -1,4 +1,4 @@
-[32mINFO    [0m test_01_login:test_01_login.py:41 ---测试登录流程---
+[32mINFO    [0m test_01_login:test_01_login.py:55 ---测试登录流程---
 [32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/tab_personal_rl')
 [32mINFO    [0m test_01_login:base_page.py:38 点击元素：('id', 'com.dangdang.reader:id/common_menu_btn')
 [32mINFO    [0m test_01_login:base_page.py:188 向上滑动第1次
@@ -27,4 +27,4 @@
 [32mINFO    [0m test_01_login:base_page.py:128 获取toast值为：登录成功
 [32mINFO    [0m test_01_login:login_page.py:96 已登录成功!
 [32mINFO    [0m test_01_login:base_page.py:66 元素出现：('id', 'com.dangdang.reader:id/nickname_tv')
-[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/1d03ad6e-6125-4758-b1de-a69fc19c9987
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:749 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))': /wd/hub/session/12c8543b-dc12-4afa-a76f-8e0712ebdb44

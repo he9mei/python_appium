@@ -40,7 +40,7 @@ def open_addfinalizer(request):
         # 尝试：增加等待时间；用绝对路径，都不行。执行完之后才生成报告。
         # 应该把发送报告单独拿出来，在全部执行完成之后才发送。
         # time.sleep(10)
-        # send_mail("/Users/hehuaimei/PycharmProjects/python_appium/po_selenium_second_pytest/report/report.html")
+        # send_mail("/Users/hehuaimei/PycharmProjects/python_appium/po_selenium_2/report/report.html")
 
     request.addfinalizer(end)
 

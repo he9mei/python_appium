@@ -40,7 +40,9 @@ desired_caps = {
     "deviceName": data["deviceName"],
     "appPackage": data["appPackage"],
     "appActivity": data["appActivity"],
-    "noReset": data["noReset"]
+    "noReset": data["noReset"],
+    "unicodeKeyboard": data["unicodeKeyboard"],
+    "resetKeyboard": data["resetKeyboard"]
 }
 
 '''

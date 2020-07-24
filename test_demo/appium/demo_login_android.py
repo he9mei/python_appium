@@ -13,7 +13,10 @@ caps["platformVersion"]="7.1.1"  #oppo
 caps["deviceName"]="MJA68TGES4S4SKAY"  # adb devices
 caps["appPackage"] = "com.dangdang.reader"  # adb shell pm list package|findstr dangdang
 caps["appActivity"] = ".activity.GuideActivity"  # adb shell dumpsys activity|findstr com.dangdang.reader|findstr LAUNCHER
-caps["noReset"] = "true"
+caps["noReset"] = "True"
+#新增两个
+caps["unicodeKeyboard"]="True"   # appium默认不支持中文，这里表示启用unicode输入法
+caps["resetKeyboard"]="True"   # 测试结束后，重置输入法到原有状态
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 #隐式等待
@@ -27,7 +30,8 @@ el2.click()
 driver.find_element_by_id("com.dangdang.reader:id/custom_login_tv").click()
 
 #切换输入法
-os.system("adb shell ime set io.appium.android.ime/.UnicodeIME")
+# os.system("adb shell ime set io.appium.android.ime/.UnicodeIME")
+#补充：以上driver新增了启动unicode,此处则可以省略了
 
 el3 = driver.find_element_by_id("com.dangdang.reader:id/name_edit")
 el3.clear()

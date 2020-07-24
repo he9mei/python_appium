@@ -8,6 +8,8 @@ deviceName: MJA68TGES4S4SKAY
 appPackage: com.dangdang.reader
 appActivity: .activity.GuideActivity  #.activity.MainActivity
 noReset: True
+unicodeKeyboard: True
+resetKeyboard: True
 ip: 127.0.0.1  #localhost
 port: 4723
 
