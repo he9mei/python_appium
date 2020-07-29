@@ -51,7 +51,8 @@ for context in all_contexts:
     print(context)
 
 #切换上下文到WEBVIEW---只有华为play切换成功了
-driver.switch_to.context("WEBVIEW_com.dangdang.reader")
+# driver.switch_to.context("WEBVIEW_com.dangdang.reader")
+driver.switch_to.context("WEBVIEW_xweb")
 print(f"切换之后的上下文：{driver.current_context}")
 
 # 操作电子书webview内容
