@@ -11,7 +11,7 @@ caps["platformName"] = "Android"
 # caps["deviceName"] = "HMKNW17727007061"
 caps["platformVersion"]="7.1.1"  #oppo
 caps["deviceName"]="MJA68TGES4S4SKAY"  # adb devices
-caps["appPackage"] = "com.dangdang.reader"  # adb shell pm list package|findstr dangdang
+caps["appPackage"] = "com.dangdang.reader"  # adb shell pm list page|findstr dangdang
 caps["appActivity"] = ".activity.GuideActivity"  # adb shell dumpsys activity|findstr com.dangdang.reader|findstr LAUNCHER
 caps["noReset"] = "True"
 #新增两个
