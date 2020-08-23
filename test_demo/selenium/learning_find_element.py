@@ -65,7 +65,7 @@ sleep(2)
 # search_box = driver.find_element_by_css_selector(".s_ipt")  # .class
 
 # css_selector 3.通过标签名定位
-# search_box = driver.find_element_by_css_selector("input")  # selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+# search_box = driver.find_element_by_css_selector("input")  # selenium.base.exceptions.ElementNotInteractableException: Message: element not interactable
 
 # css_selector 4.通过标签层级关系定位
 # search_box = driver.find_element_by_css_selector("span>input")
