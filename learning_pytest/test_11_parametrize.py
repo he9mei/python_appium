@@ -42,10 +42,18 @@ class TestPara:
         print(f"登录的手机号是{data[0]}密码是{data[1]}")
     '''
     #方法2：把数据写成字典组成的列表
+    '''
     @pytest.mark.parametrize("data",login_data_dict)
     def test_login3(self,data):
         # print(f"登录的手机号是{data["account"]}密码是{data["pw"]}")  #这种情况下格式化输出无法识别key
         print("登录的手机号是"+data["account"]+"密码是"+data["pw"])  #直接输入是可以的
+    '''
+
+    # 补充一种写法---类似于解包
+    @pytest.mark.parametrize("account,pw", login_data_dict)
+    def test_login3(self, account, pw):
+        # print(f"登录的手机号是{data["account"]}密码是{data["pw"]}")  #这种情况下格式化输出无法识别key
+        print("登录的手机号是" + account + "密码是" + pw)  # 直接输入是可以的
 
     #方法3：把数据写在excel中---暂未实现
 

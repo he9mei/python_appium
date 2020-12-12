@@ -3,8 +3,10 @@ automationName: UIAutomator2  #appium
 platformName: Android
 #platformVersion: 9   #华为手机
 #deviceName: GEY6R20507024610
-platformVersion: 7.1.1  #oppo手机
-deviceName: MJA68TGES4S4SKAY
+#platformVersion: 7.1.1  #oppo手机
+#deviceName: MJA68TGES4S4SKAY
+platformVersion: 8.0.0  #华为手机
+deviceName: HMKNW17727007061
 appPackage: com.dangdang.reader
 appActivity: .activity.GuideActivity  #.activity.MainActivity
 noReset: True

@@ -1,6 +1,6 @@
 '''
-2.yield和addfinalizerq的区别
-(1)yield：当用例执行完毕之后，会执行yield后面的代码，但不能return
+2.yield和addfinalizer的区别
+(1)yield：当用例执行完毕之后，会执行yield后面的代码，但不能return===这里纠正一下，yield是可以直接返回的，比如yield driver
 (2)addfinalizer这个实现功能与yield一样，可以return参数，传给后面的用例
 '''
 
