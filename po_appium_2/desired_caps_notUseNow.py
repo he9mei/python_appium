@@ -7,7 +7,7 @@ file = open("desired_caps.yaml","r")
 data = yaml.load(stream=file, Loader=yaml.FullLoader)
 
 # 直接将desired_caps导入conftest.py，用不了，总是提示：
-# E  selenium.common.exceptions.WebDriverException: Message: Desired Capabilities must be a dictionary
+# E  selenium.base.exceptions.WebDriverException: Message: Desired Capabilities must be a dictionary
 # 暂时解决办法：直接将本也没内容写在conftest.py中
 desired_caps = {
     "automationName": data["automationName"],

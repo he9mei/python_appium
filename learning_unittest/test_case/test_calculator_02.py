@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # 好处是：1.可以灵活控制执行哪些用例，因为并不是每次都有执行所有用例；2.可以直接控制用例执行的顺序。
 
     #创建TestSuit
-    suit=unittest.TestSuite()
+    suit = unittest.TestSuite()
     suit.addTest(TestCalculator_02("test_add"))
     suit.addTest(TestCalculator_02("test_sub"))
     #创建TestRunner

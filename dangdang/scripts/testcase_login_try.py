@@ -3,7 +3,7 @@ import os
 
 import pytest
 from selenium.common.exceptions import NoSuchElementException
-# from selenium.webdriver.common.by import By
+# from selenium.webdriver.base.by import By
 
 from dangdang.base.base_try_3 import BasePre  #导入包时应该from到py文件
 from dangdang.pages.login_page import ElementLogin

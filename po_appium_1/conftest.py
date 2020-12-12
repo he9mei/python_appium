@@ -21,7 +21,7 @@ caps = {
     "deviceName": "MJA68TGES4S4SKAY",
     # "platformVersion": "5.1",  #乐蒙手机
     # "deviceName": "MUGW8SOWWEY75NNDM",
-    "appPackage": "com.dangdang.reader",  #adb shell pm list package -3
+    "appPackage": "com.dangdang.reader",  #adb shell pm list page -3
     "appActivity": ".activity.GuideActivity",  #adb shell dumpsys activity |grep com.dangdang.reader |grep LAUNCHER
     "noReset": True
 }

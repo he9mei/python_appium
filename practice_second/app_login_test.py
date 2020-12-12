@@ -6,7 +6,7 @@ caps = {
     "platformName": "android",
     "platformVersion": "6.0.1",
     "deviceName": "emulator-5554",  # adb devices
-    "appPackage": "com.dangdang.reader",  # adb shell pm list package|findstr dangdang
+    "appPackage": "com.dangdang.reader",  # adb shell pm list page|findstr dangdang
     "appActivity": ".activity.GuideActivity",  # adb shell dumpsys activity|findstr com.dangdang.reader|findstr LAUNCHER
     "noReset": "true",
 }
