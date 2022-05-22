@@ -55,7 +55,8 @@ class TestPara:
         # print(f"登录的手机号是{data["account"]}密码是{data["pw"]}")  #这种情况下格式化输出无法识别key
         print("登录的手机号是" + account + "密码是" + pw)  # 直接输入是可以的
 
-    #方法3：把数据写在excel中---暂未实现
+    # 方法3：把数据写在excel中---可以通过Python_api中的do_excel.py实现
+
 
 '''
 执行结果：

@@ -18,7 +18,7 @@ caps["noReset"] = "True"
 caps["unicodeKeyboard"]="True"   # appium默认不支持中文，这里表示启用unicode输入法
 caps["resetKeyboard"]="True"   # 测试结束后，重置输入法到原有状态
 
-driver = webdriver.Remote("http://0.0.0.0:4723/wd/hub", caps)
+driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 #隐式等待
 driver.implicitly_wait(10)
 

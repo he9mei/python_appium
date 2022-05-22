@@ -20,17 +20,18 @@ caps["noReset"] = "True"
 caps["unicodeKeyboard"]="True"   # appium默认不支持中文，这里表示启用unicode输入法
 caps["resetKeyboard"]="True"   # 测试结束后，重置输入法到原有状态
 
-driver = webdriver.Remote("http://0.0.0.0:4723/wd/hub", caps)
+driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 driver.implicitly_wait(10)
 
+driver.find_element_by_id("com.dangdang.reader:id/tab_personal_iv").click()
 
+# driver.execute("enableFlutterDriverExtension()")
 finder = FlutterFinder()
-
-text_finder = finder.by_text('我的')
+text_finder = finder.by_text("收藏")
 text_element = FlutterElement(driver, text_finder)
 text_element.click()
 
-#等待
+# 等待
 time.sleep(5)
 
 driver.quit()

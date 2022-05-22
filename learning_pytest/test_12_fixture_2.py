@@ -23,14 +23,14 @@ def test_shoppping(open):
 
 
 # -----以下新增实际使用时的获取driver的setup和teardown------
-# yield写法1---第1中写法的问题是，不能返回值
+# yield写法1---第1中写法，可以直接yield driver返回driver
 @pytest.fixture(scope="session",autouse=True)
 def browser():
     driver=webdriver.Chrome()
     driver.implicitly_wait(10)
     print('启动driver')
 
-    yield
+    yield driver
     driver.quit()
     print("关闭driver")
 
